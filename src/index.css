@@ -3,7 +3,7 @@
 .footer {
   grid-area: footer;
   color: #ffffff;
-  background-color: #59c65b;
+  background-color: #2b2b2b;
   display: flex;
   justify-content: center;
   align-items: center;
