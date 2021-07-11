@@ -1,2 +1,2 @@
-# COMP3340000
+# COMP3340-Project
 
