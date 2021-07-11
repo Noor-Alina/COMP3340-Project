@@ -1,3 +1,2 @@
-# COMP3340-Project
+# COMP3340
 
-test
