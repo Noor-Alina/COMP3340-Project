@@ -11,9 +11,9 @@ class Header extends React.Component {
                     <Link to = "/">EcoShopper</Link>
                 </div>
                 <div className = "header-links">
-                    <a href = "/Signin">Login</a>
-                    <a href = "/Contact">Cart</a>
-                    <a href = "/Contact">Contact</a>
+                    <a href = "/Signin">Login </a>
+                    <a href = "/Cart">Cart </a>
+                    <a href = "/Contact">Contact </a>
                 </div>
             </header>
             </div>
