@@ -13,6 +13,7 @@ export default class Home extends React.Component{
                     <input type="text" placeholder="Search..." name="search-button" />
                     <button type="submit">Submit</button>
                 </form>
+                <img src= "../assets/images/canada-flag.png" />
             <br/>
             <Footer/>
         </div>
