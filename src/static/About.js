@@ -16,20 +16,11 @@ export default class About extends React.Component{
 
             <div style="overflow:auto">
 
-                <div class="menu">
-                    <ul>
-                        <li><div class="menuitem"><a href="#">Home</a></div></li>
-                        <li><div class="menuitem"><a href="#">Products</a></div></li>
-                        <li><div class="menuitem"><a href="#">Contact Us</a></div></li>
-                        <li><div class="menuitem"><a href="#">About Us</a></div></li>
-                    </ul>
-                </div>
       
                 <div class="main">
                     <h2>About EcoShopper</h2>
-                    <p>We sell eco-friendly products. 
-                    EchoShopper is one of the best online stores that specializes in selling eco-friendly products.</p>
-                    <img src="ef.jpg" style="width:100%" />
+                    <p>EcoShopper is one of the best online stores that specializes in selling ethically sourced products.</p>
+                    <img src="assets\images\sun.jpg" style="width:100%" />
                 </div>
 
                 <div class="right">
