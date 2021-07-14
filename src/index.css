@@ -113,3 +113,48 @@ img{
   margin-right: auto;
   width: 75%;
 }
+.flag {
+  background: url(./assets/images/canada-flag.png);
+  width:60px;
+  height:30px;
+}
+
+.contact-h1{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+section {
+  margin: 0% 20%;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  border-color: rgb(173, 255, 47);
+  background-color: lightgreen;
+}
+
+.contact-label{
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+}
+
+.contact-text{
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form {
+  padding: 30px;
+  box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.6);
+ 
+}
+
+.contact-input{
+  display: block;
+  width: 100%;
+  height: 25px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
