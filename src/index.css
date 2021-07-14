@@ -57,10 +57,16 @@
 .search-bar {
   position: relative;
   width: 50%;
-  left: 40%;
+  left: 60%;
 } 
 
 p {
   text-align: center;
   padding-top: 15px;
+}
+
+.flag {
+  background: url(./assets/images/canada-flag.png);
+  width:60px;
+  height:30px;
 }
