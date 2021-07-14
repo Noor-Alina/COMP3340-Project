@@ -11,7 +11,7 @@ class Footer extends React.Component {
                             <h5>Get to Know Us</h5>
                             <ul class = "footer-links">
                                 <li>About us</li>
-                                <li>Contact Us</li>
+                                <li>Contact us</li>
                                 <li>Frequently Asked Questions (FAQs)</li>
                             </ul>
                         </div>
