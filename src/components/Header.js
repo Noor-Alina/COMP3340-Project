@@ -1,4 +1,3 @@
-import About from '../static/About';
 import React from 'react';
 import {Link} from 'react-router-dom';
 
