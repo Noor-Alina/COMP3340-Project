@@ -34,22 +34,22 @@ export default class Contact extends React.Component {
                 <Header />
                 <br />
                 <div>
-                    <h1 class="contact-h1">Contact-Us Form</h1>
+                    <h1 className="contact-h1">Contact-Us Form</h1>
                 </div>
                 <section>
-                <form class="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                        <label class="contact-label" for="fname" > First Name: <input class="contact-input" type="text" placeholder="First Name" required/>
+                <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                        <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required/>
                         </label><br></br>
                     
-                        <label class="contact-label" for="lname" > Last Name: <input class="contact-input" type="text" placeholder="Last Name" required/>
-                        </label><br></br>
-                    
-                    
-                        <label class="contact-label" for="email-id">Email Id: <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                        <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required/>
                         </label><br></br>
                     
                     
-                        <label class="contact-label" for="message">Message: <br></br> <textarea class="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
+                        <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                        </label><br></br>
+                    
+                    
+                        <label className="contact-label" for="message">Message: <br></br> <textarea className="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
                         </label><br></br>
                         
                     

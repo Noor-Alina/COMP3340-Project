@@ -1,27 +1,56 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import React from 'react';
+import Canada from '../assets/images/canada-flag.png'
+import React, { Component } from 'react';
+import Modal from './Modal.js';
 
-function Home() {
+class Home extends Component {
+    constructor() {
+        super();
+        this.state = {
+          show: false
+        };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+      }
+    
+      showModal = () => {
+        this.setState({ show: true });
+      };
+    
+      hideModal = () => {
+        this.setState({ show: false });
+      };
+
+    render() {
         return (
         <div>
             <Header/>
             <br/>
-                <div class = "row">
-                    <div class = "col-md-8">
-                        <form class="search-bar">
+                <div className = "row">
+                    <div className = "col-md-8">
+                        <form className="search-bar">
                             <input type="text" placeholder="Search..." name="search-button" />
                             <button type="submit">Submit</button>
                         </form>
                     </div>
-                    <div class = "col-md-2">
+                    <div className = "col-md-2">
+                        <img src={Canada} />
                         <div classname="flag" alt="country selector"></div>
                     </div>
                 </div>
+        <h1>React Modal</h1>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+        </Modal>
+        <button type="button" onClick={this.showModal}>
+          Open
+        </button>
             <br/>
             <Footer/>
         </div>
         );
+    }
 }
 
 export default Home;
