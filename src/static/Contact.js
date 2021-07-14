@@ -28,6 +28,8 @@ export default class Contact extends React.Component {
         this.setState({fname: '',lname:'', email: '', message: ''})
       }
 
+      //test test
+
     render() {  
         return (
             <div>
