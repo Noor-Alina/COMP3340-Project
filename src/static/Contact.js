@@ -18,30 +18,27 @@ export default class Contact extends React.Component {
                 </div>
                 <section>
                 <form class="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <div class="contact-us">
-                        <label class="contact-label" for="name">Name:</label>
-                        <input class="contact-input" type="text" class="c-control" />
-                    </div>
-                    <div class="contact-us">
-                        <label class="contact-label" for="email-id">Email:</label>
-                        <input class="contact-input" type="email" class="c-control" aria-describedby="emailHelp" />
-                    </div>
-                    <div class="contact-us">
+                        <label class="contact-label" for="fname" > First Name: <input class="contact-input" type="text" placeholder="First Name" required/>
+                        </label><br></br>
+                    
+                        <label class="contact-label" for="lname" > Last Name: <input class="contact-input" type="text" placeholder="Last Name" required/>
+                        </label><br></br>
+                    
+                    
+                        <label class="contact-label" for="email-id">Email Id: <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                        </label><br></br>
+                    
+                    
                         <label class="contact-label" for="message">Message: </label>
-                        <textarea class="contact-text" class="c-control" rows="5" height = "300px"></textarea>
-                    </div>
+                        <textarea class="contact-text" class="c-control" height = "300px" placeholder="Your Message" required></textarea>
+                    
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
                     <div>
                     <br></br>
                     </div>
-
-                
                 </form>
-                
                 </section>
-                
-                
             </div>
 
         );
