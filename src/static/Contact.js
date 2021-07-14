@@ -58,12 +58,50 @@ export default class Contact extends React.Component {
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
             <div>
+<<<<<<< HEAD
               <br></br>
             </div>
           </form>
         </section>
         <Footer />
       </div>
+=======
+                <Header />
+                <br />
+                <div>
+                    <h1 className="contact-h1">Contact-Us Form</h1>
+                </div>
+                <section>
+                <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                        <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required/>
+                        </label><br></br>
+                    
+                        <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required/>
+                        </label><br></br>
+                    
+                    
+                        <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                        </label><br></br>
+                    
+                    <div>
+                    <label class="contact-label" for="email-id">Email Id: </label>
+                    <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                    </div>
+                    
+                        <label className="contact-label" for="message">Message: <br></br> <textarea className="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
+                        </label><br></br>
+                        
+                    
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <div>
+                    <br></br>
+                    </div>
+                </form>
+                </section>
+                <Footer/>
+          </div>
+>>>>>>> c195c5667e1cd1cbbea635061d41f9f14a4bb5b3
 
     );
   }
