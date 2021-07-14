@@ -1,5 +1,7 @@
-import React from 'react'
+import About from '../static/About';
+import React from 'react';
 import {Link} from 'react-router-dom';
+
 
 
 class Header extends React.Component {
@@ -14,6 +16,7 @@ class Header extends React.Component {
                     <a href = "/Signin">Login</a>
                     <a href = "/Cart">Cart</a>
                     <a href = "/Contact">Contact</a>
+                    <a href = "/About">About Us</a>
                 </div>
             </header>
             </div>
