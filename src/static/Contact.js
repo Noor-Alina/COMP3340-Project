@@ -48,6 +48,10 @@ export default class Contact extends React.Component {
                         <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
                         </label><br></br>
                     
+                    <div>
+                    <label class="contact-label" for="email-id">Email Id: </label>
+                    <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                    </div>
                     
                         <label className="contact-label" for="message">Message: <br></br> <textarea className="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
                         </label><br></br>
@@ -60,7 +64,8 @@ export default class Contact extends React.Component {
                     </div>
                 </form>
                 </section>
-            </div>
+                <Footer/>
+          </div>
 
         );
     }
