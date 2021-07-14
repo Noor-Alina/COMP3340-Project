@@ -38,19 +38,27 @@ export default class Contact extends React.Component {
                 </div>
                 <section>
                 <form class="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                        <label class="contact-label" for="fname" > First Name: <input class="contact-input" type="text" placeholder="First Name" required/>
-                        </label><br></br>
+                      <div>
+                      <label class="contact-label" for="fname" > First Name: </label>
+                      <input class="contact-input" type="text" placeholder="First Name" required/>
+                      </div>
+                      
+                      <div>
+                      <label class="contact-label" for="lname" > Last Name: </label>
+                      <input class="contact-input" type="text" placeholder="Last Name" required/>
+                      </div>
+                        
                     
-                        <label class="contact-label" for="lname" > Last Name: <input class="contact-input" type="text" placeholder="Last Name" required/>
-                        </label><br></br>
+                    <div>
+                    <label class="contact-label" for="email-id">Email Id: </label>
+                    <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
+                    </div>
                     
-                    
-                        <label class="contact-label" for="email-id">Email Id: <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
-                        </label><br></br>
-                    
-                    
-                        <label class="contact-label" for="message">Message: <br></br> <textarea class="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
-                        </label><br></br>
+                    <div>
+                  
+                    <label class="contact-label" for="message">Message: </label>
+                    <textarea class="contact-text" class="c-control" height="300px" width = "600px" placeholder="Your Message" required></textarea>
+                    </div>
                         
                     
                     <button type="submit">Submit</button>
@@ -60,7 +68,8 @@ export default class Contact extends React.Component {
                     </div>
                 </form>
                 </section>
-            </div>
+                <Footer/>
+          </div>
 
         );
     }
