@@ -83,22 +83,33 @@ p {
 }
 
 .right {
-  padding-top: 50px;
+  padding-top: 25px;
   background-color: #59c65b;
-  float: left;
+  float: right;
   width: 20%;
   padding: 10px 15px;
   margin-top: 7px;
+  text-align: left;
 }
 
-.menuitem {
-  padding: 8px;
-  margin-top: 7px;
-  border-bottom: 1px solid #f1f1f1;
-}
+
+
 .main {
   float: left;
-  width: 60%;
-  padding: 0 20px;
+  width: 80%;
+  padding: 20px 20px;
   overflow: hidden;
+}
+.about{
+  background-color: #2b2b2b;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
