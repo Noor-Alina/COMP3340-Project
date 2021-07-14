@@ -12,4 +12,4 @@ class TAC extends React.Component {
     }
 }
 
-export default Header;
+export default TAC;
