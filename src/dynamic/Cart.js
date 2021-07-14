@@ -7,6 +7,7 @@ export default class Cart extends React.Component {
         return (
             <div>
                 <Header />
+                <Footer />
             </div>
         );
     }
