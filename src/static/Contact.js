@@ -29,8 +29,9 @@ export default class Contact extends React.Component {
                         </label><br></br>
                     
                     
-                        <label class="contact-label" for="message">Message: </label>
-                        <textarea class="contact-text" class="c-control" height = "300px" placeholder="Your Message" required></textarea>
+                        <label class="contact-label" for="message">Message: <br></br> <textarea class="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
+                        </label><br></br>
+                        
                     
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
