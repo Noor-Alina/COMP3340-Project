@@ -1,12 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-<<<<<<< HEAD
-
-//<a href = "/Signin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
-
-=======
 import {FaCartPlus, FaSignOutAlt} from 'react-icons/fa'
->>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
 
 class Header extends React.Component {
     render() {
@@ -25,15 +19,6 @@ class Header extends React.Component {
                     <Link className="nav-item nav-link" to = "FAQ"> FAQ </Link> 
                     { user && <Link className="nav-item nav-link" to="/Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
                 </div>
-<<<<<<< HEAD
-                <div className = "header-links">
-                    <a href = "/Signin">Login</a>
-                    <a href = "/About">About us</a>
-                    <a href = "/Contact">Contact</a>
-                    <a href = "/About">About Us</a>
-                    <a href = "/Cart">Cart</a>
-=======
->>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
                 </div>
             </nav>
         )

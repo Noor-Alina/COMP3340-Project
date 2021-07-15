@@ -7,13 +7,8 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-<<<<<<< HEAD
-    "axios": "^0.21.1",
-    "bootstrap": "^3.4.1",
-=======
     "bootstrap": "^4.6.0",
     "firebase": "^8.7.1",
->>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",

@@ -11,18 +11,10 @@ import About from './static/About';
 import Contact from './static/Contact';
 import TAC from './static/TAC';
 import FAQ from './static/FAQ';
-<<<<<<< HEAD
-import Orders from './static/Orders';
-import Delivery from './static/Delivery';
-import ReturnsRefunds from './static/Returns&Refunds';
-import Account from './static/Account';
-
-=======
 import firebase from './components/Firebase';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import history from './components/history';
->>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
 
