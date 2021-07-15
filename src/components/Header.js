@@ -1,22 +1,26 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-
+import {FaCartPlus, FaSignOutAlt} from 'react-icons/fa'
 
 class Header extends React.Component {
     render() {
+        const { user, logOutUser } = this.props;
         return (
-            <div>
-                <header className = "header">    
-                <div className = "brand">
-                    <Link to = "/">EcoShopper</Link>
+            <nav className="site-nav family-sans navbar navbar-expand bg-success navbar-dark higher">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper</Link>
+                <div className="navbar-nav ml-auto">
+                    { !user && <Link className="nav-item nav-link" to = "Signin"> Login </Link>}
+                    { !user && <Link className="nav-item nav-link" to = "Signup"> Signup </Link> }
+                    { user && <Link className="nav-item nav-link" to = "Cart"> Cart </Link> }
+                    <Link className="nav-item nav-link" to = "Contact"> Contact </Link> 
+                    <Link className="nav-item nav-link" to = "About"> About </Link> 
+                    <Link className="nav-item nav-link" to = "TAC"> TAC </Link> 
+                    <Link className="nav-item nav-link" to = "FAQ"> FAQ </Link> 
+                    { user && <Link className="nav-item nav-link" to="/Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
                 </div>
-                <div className = "header-links">
-                    <a href = "/Signin">Login </a>
-                    <a href = "/Cart">Cart </a>
-                    <a href = "/Contact">Contact </a>
                 </div>
-            </header>
-            </div>
+            </nav>
         )
     }
 }
