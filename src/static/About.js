@@ -13,7 +13,7 @@ export default class About extends React.Component{
             
             <Header/>
             
-            <div>
+            {/* <div>
             <div class="about">
                 <h1>About EcoShopper</h1>
             </div>
@@ -37,12 +37,12 @@ export default class About extends React.Component{
                     <p style={{textAlign: 'left'}}>Our store is online based with the intention to expand in the future.</p>
                     <h2>Prices?</h2>
                     <p style={{textAlign: 'left'}}>We try to get our valued customres the best value for their money.</p>
-                </div>
+                </div> 
             </div> 
 
             <br/>
-            <Footer/>
-        </div>
+            <Footer/> 
+        </div> */}
         </div>
         );
 }
