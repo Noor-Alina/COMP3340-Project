@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -30,7 +31,6 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <br />
         <div>
             Contact
