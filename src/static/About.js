@@ -1,5 +1,3 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import React from 'react';
 
 
@@ -10,6 +8,7 @@ export default class About extends React.Component{
     render() {
         return (
         <div>
+<<<<<<< HEAD
             
             <Header/>
             
@@ -43,6 +42,9 @@ export default class About extends React.Component{
             <br/>
             <Footer/> 
         </div> */}
+=======
+            About
+>>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
         </div>
         );
 }

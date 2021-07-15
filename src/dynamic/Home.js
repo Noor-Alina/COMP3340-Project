@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Canada from '../assets/images/canada-flag.png'
@@ -21,11 +22,13 @@ class Home extends Component {
       hideModal = () => {
         this.setState({ show: false });
       };
+=======
+import React from 'react';
+>>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
 
     render() {
         return (
         <div>
-            <Header/>
             <br/>
                 <div className = "row">
                     <div className = "col-md-8">
@@ -47,7 +50,6 @@ class Home extends Component {
           Open
         </button>
             <br/>
-            <Footer/>
         </div>
         );
     }
