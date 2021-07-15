@@ -8,7 +8,7 @@ export default class About extends React.Component{
         return (
         <div>
             <Header/>
-            {/* <br/>
+            <br/>
             <div style="background-color:#f7f7f7;padding:15px;">
                 <h1>About Us</h1>
   
@@ -40,7 +40,7 @@ export default class About extends React.Component{
                     <h2>Prices?</h2>
                     <p>We try to get our valued customres the best value for their money.</p>
                 </div>
-            </div> */}
+            </div> 
 
             <br/>
             <Footer/>
