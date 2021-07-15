@@ -1,7 +1,4 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -36,7 +33,7 @@ export default class Contact extends React.Component {
         <Header />
         <br />
         <div>
-          <h1 className="contact-h1">Contact-Us Form</h1>
+            Contact
         </div>
         <section>
           <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">

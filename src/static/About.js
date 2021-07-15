@@ -1,5 +1,3 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import React from 'react';
 
 
@@ -9,10 +7,7 @@ export default class About extends React.Component{
       
     render() {
         return (
-        <div>
-            
-            <Header/>
-            
+        <div>            
             <div>
             <div class="about">
                 <h1>About EcoShopper</h1>
@@ -41,7 +36,6 @@ export default class About extends React.Component{
             </div> 
 
             <br/>
-            <Footer/>
         </div>
         </div>
         );
