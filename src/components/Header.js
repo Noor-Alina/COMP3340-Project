@@ -12,7 +12,7 @@ class Header extends React.Component {
                     <Link to = "/">EcoShopper</Link>
                 </div>
                 <div className = "header-links">
-                    <a href = "/Signin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+                    <a href = "/Signin">Login</a>
                     <a href = "/About">About us</a>
                     <a href = "/Contact">Contact</a>
                     <a href = "/About">About Us</a>
