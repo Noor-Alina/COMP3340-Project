@@ -10,6 +10,10 @@ import About from './static/About';
 import Contact from './static/Contact';
 import TAC from './static/TAC';
 import FAQ from './static/FAQ';
+import Orders from './static/Orders';
+import Delivery from './static/Delivery';
+import ReturnsRefunds from './static/Returns&Refunds';
+import Account from './static/Account';
 
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
@@ -26,6 +30,12 @@ function App() {
             <Route exact path="/Contact" component={Contact} />
             <Route exact path="/TAC" component={TAC} /> 
             <Route exact path="/FAQ" component={FAQ} /> 
+            <Route exact path="/Orders" component={Orders} /> 
+            <Route exact path="/Delivery" component={Delivery} /> 
+            <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} /> 
+            <Route exact path="/Account" component={Account} /> 
+
+
           </Switch>
       </Router>
   );
