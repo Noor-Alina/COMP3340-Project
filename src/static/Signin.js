@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import React from 'react';
-
-class Signin extends React.Component {
-    render() {
-        return (
-            <div>
-               <Header/>
-               
-               </div>
-
-
-        );
-    }
-}
-export default Signin;
-=======
 import React from 'react';
 import {withRouter} from 'react-router';
 
@@ -127,4 +108,3 @@ class Signin extends React.Component{
 }
 
 export default withRouter(Signin)
->>>>>>> 1c06305120c35489bc2d5671e868ae3d6a305883
