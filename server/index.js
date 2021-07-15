@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express(); // create express app
+const data = require("./data/example.json");
 
-app.get("/", (req, res) => {
-  res.send("This is from express.js");
+app.get("/products", (req, res) => {
+  res.status(200).json(data);
 });
 
 // start express server on port 5000
