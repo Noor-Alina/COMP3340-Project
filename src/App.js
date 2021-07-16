@@ -19,11 +19,11 @@ import Orders from './static/Orders';
 import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/Returns&Refunds';
 import Account from './static/Account';
+
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
 
 function App(props) {
-
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState(null);
   const [userID, setUserID] = useState(null);

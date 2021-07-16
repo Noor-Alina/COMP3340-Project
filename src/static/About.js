@@ -10,7 +10,7 @@ export default class About extends React.Component{
         <div>            
             <div>
             <div class="about">
-                <h1>About EcoShopper</h1>
+                <h2>About EcoShopper</h2>
             </div>
                 
             <br/>
