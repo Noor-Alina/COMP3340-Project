@@ -63,7 +63,7 @@ class Signin extends React.Component{
                             <div className="card-body">
                             <h3 className="font-weight-light mb-3">Log in</h3>
                             <section className="form-group">
-                            { this.state.errorMessage && this.renderError }
+                            { this.state.errorMessage && this.renderError() }
                                 <label
                                 className="form-control-label sr-only"
                                 htmlFor="Email">
