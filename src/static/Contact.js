@@ -1,7 +1,5 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
+import axios from 'axios'
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -13,7 +11,7 @@ export default class Contact extends React.Component {
 
     axios({
       method: "POST",
-      url: "http://localhost:3002/send",
+      mailto: "ecoshopper@gmail.com",
       data: this.state
     }).then((response) => {
       if (response.data.status === 'success') {
@@ -28,47 +26,30 @@ export default class Contact extends React.Component {
     this.setState({ fname: '', lname: '', email: '', message: '' })
   }
 
-      //test test
+  //test test
 
-    render() {  
-        return (
+  render() {
+    return (
+      <div>
+        <br />
+        <div>
+            Contact
+        </div>
+        <section>
+          <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+            <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />
+            <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required /> </label><br />
+            <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required /></label><br />
+            <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="80" placeholder="Your Message" required></textarea> </label><br />
+            <button className="contact-button" type="submit">Submit</button>
+            <button className="contact-button" type="reset">Reset</button>
             <div>
-                <Header />
-                <br />
-                <div>
-                    <h1 className="contact-h1">Contact-Us Form</h1>
-                </div>
-                <section>
-                <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                        <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required/>
-                        </label><br></br>
-                    
-                        <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required/>
-                        </label><br></br>
-                    
-                    
-                        <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
-                        </label><br></br>
-                    
-                    <div>
-                    <label class="contact-label" for="email-id">Email Id: </label>
-                    <input class="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required/>
-                    </div>
-                    
-                        <label className="contact-label" for="message">Message: <br></br> <textarea className="contact-text" class="c-control"  placeholder="Your Message" required></textarea>
-                        </label><br></br>
-                        
-                    
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
-                    <div>
-                    <br></br>
-                    </div>
-                </form>
-                </section>
-                <Footer/>
-          </div>
-
+              <br />
+            </div>
+          </form>
+        </section>
+        <br/>
+      </div>
     );
   }
 

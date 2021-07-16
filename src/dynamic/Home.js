@@ -1,31 +1,9 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Canada from '../assets/images/canada-flag.png'
-import React, { Component } from 'react';
-import Modal from './Modal.js';
+import React from 'react';
 
-class Home extends Component {
-    constructor() {
-        super();
-        this.state = {
-          show: false
-        };
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
-      }
-    
-      showModal = () => {
-        this.setState({ show: true });
-      };
-    
-      hideModal = () => {
-        this.setState({ show: false });
-      };
-
+class Home extends React.Component {
     render() {
         return (
         <div>
-            <Header/>
             <br/>
                 <div className = "row">
                     <div className = "col-md-8">
@@ -34,20 +12,7 @@ class Home extends Component {
                             <button type="submit">Submit</button>
                         </form>
                     </div>
-                    <div className = "col-md-2">
-                        <img src={Canada} />
-                        <div classname="flag" alt="country selector"></div>
-                    </div>
                 </div>
-        <h1>React Modal</h1>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-        </Modal>
-        <button type="button" onClick={this.showModal}>
-          Open
-        </button>
-            <br/>
-            <Footer/>
         </div>
         );
     }

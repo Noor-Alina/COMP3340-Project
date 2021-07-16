@@ -1,15 +1,12 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import React from 'react';
 
-class TAC extends React.Component {
+export default class TAC extends React.Component{
+      
     render() {
         return (
-            <div>
-               
-            </div>
-        )
+        <div>
+            Terms and Conditions
+        </div>
+        );
     }
 }
-
-export default TAC;
