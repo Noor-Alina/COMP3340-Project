@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Card, Button } from 'react-bootstrap';
 
 class Home extends React.Component {
     constructor(props) {
@@ -21,23 +22,7 @@ class Home extends React.Component {
 
         return (
         <div>
-        <ul className="users">
-            {users.map(user => 
-            <li className="user">
-              <p>
-                <strong>Name:</strong> {user.name}
-              </p>
-              <p>
-                <strong>Email:</strong> {user.email}
-              </p>
-              <p>
-                <strong>City:</strong> {user.address.city}
-              </p>
-            </li>
-          )}
-        </ul>
-            <br/>
-                <div className = "row">
+            <div className = "row">
                     <div className = "col-md-8">
                         <form className="search-bar">
                             <input type="text" placeholder="Search..." name="search-button" />
@@ -45,6 +30,25 @@ class Home extends React.Component {
                         </form>
                     </div>
                 </div>
+                <br></br>
+            <ul className="flex-container wrap">
+                {users.map(user =>
+                <ol className="flex-item">
+                    <Card style={{ width: '18rem', marginBottom: '2rem'}}>
+                        <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Body>
+                                <Card.Title>{user.name}</Card.Title>
+                                <Card.Text>
+                                    {user.email}
+                                    Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.
+                                </Card.Text>
+                                <Button variant="primary">Add to Cart</Button>
+                            </Card.Body>
+                    </Card>
+                </ol>
+                )}
+            </ul>                
         </div>
         );
     }
