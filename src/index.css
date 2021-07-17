@@ -57,10 +57,135 @@
 .search-bar {
   position: relative;
   width: 50%;
-  left: 40%;
+  left: 60%;
 } 
 
 p {
   text-align: center;
   padding-top: 15px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+.right {
+  padding-top: 25px;
+  background-color: #59c65b;
+  float: right;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+  text-align: left;
+}
+
+
+
+.main {
+  float: left;
+  width: 80%;
+  padding: 20px 20px;
+  overflow: hidden;
+}
+.about{
+  background-color: #2b2b2b;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+.flag {
+  background: url(./assets/images/canada-flag.png);
+}
+
+.contact-h1{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+section {
+  margin: 0% 20%;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  border-color: rgb(173, 255, 47);
+  background-color: lightgreen;
+}
+
+.contact-label{
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+}
+
+.contact-text{
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form {
+  padding: 30px;
+  box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.6);
+ 
+}
+
+.contact-input{
+  display: block;
+  width: 100%;
+  height: 25px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.contact-button{
+  border: 1px solid grey;
+	border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 20px;
 }
