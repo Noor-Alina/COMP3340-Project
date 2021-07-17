@@ -17,7 +17,9 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-shopping-cart": "^1.9.5",
     "react-use-cart": "^1.11.2",
+    "redux": "^4.1.0",
     "swup": "^2.0.14",
     "web-vitals": "^1.1.2"
   },
