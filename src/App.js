@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 import history from './components/history';
 import Orders from './static/Orders';
 import Delivery from './static/Delivery';
-import ReturnsRefunds from './static/Returns&Refunds';
+import ReturnsRefunds from './static/ReturnsRefunds';
 import Account from './static/Account';
 
 //TAC: Terms and Conditions page
