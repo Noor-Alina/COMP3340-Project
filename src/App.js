@@ -23,6 +23,10 @@ import Account from './static/Account';
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
 
+//Cart
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { CartProvider } from 'react-use-cart';
+
 function App(props) {
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState(null);
@@ -103,6 +107,11 @@ function App(props) {
           </Switch>
         </Router>
       <Footer/>
+        <>
+        <CartProvider>
+          <Cart />
+        </CartProvider>
+        </>
     </div>
   );
 }
