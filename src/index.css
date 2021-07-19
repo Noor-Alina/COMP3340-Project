@@ -189,3 +189,57 @@ section {
   padding: 8px 12px;
   font-size: 20px;
 }
+
+/* AN */
+.title {
+  padding: 20px;
+  text-align: center;
+  background: #59c65b; 
+  color: #3c403d;
+  font-size: 30px;
+  
+}
+
+h1 {
+  color: #2b2b2b;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+h2 {
+  color: #3696dc;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size:large;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.row{
+  height: 1em;
+  width: 100%;
+  margin:  auto;
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+}
+
+.column {
+  margin: 25px 15px 25px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background: #ffffff;
+  border-radius: 10px;
+  flex-basis: 33%;
+  height: 120px;
+ 
+
+}
+
+.block{
+  padding: 15px 25px;
+  background-color: #f7f7f7;
+}
