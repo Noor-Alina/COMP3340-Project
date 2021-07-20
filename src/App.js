@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 import Home from './dynamic/Home';
-import Cart from './dynamic/Cart';
+//import Cart from './dynamic/Cart/Cart';
 import Signup from './static/Signup';
 import Signin from './static/Signin';
 import About from './static/About';
@@ -20,18 +20,23 @@ import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/Returns&Refunds';
 import Account from './static/Account';
 
+
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
 
-//Cart
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { CartProvider } from 'react-use-cart';
+
+//cart
+import Main from './dynamic/Cart/Main';
+import Basket from './dynamic/Cart/Basket';
+import data from './dynamic/data';
+
 
 function App(props) {
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState(null);
   const [userID, setUserID] = useState(null);
   const [userDetails, setUserDetails] = useState({});
+  
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged( FBUser => {
@@ -84,14 +89,41 @@ function App(props) {
     );
   }
 
+ //cart
+  const {products} = data;
+  const [cartItems,setCartItems] = useState([]);
+  //add items to cart
+  const onAdd = (product) => {
+    const exist = cartItems.find(x => x.id === product.id);
+    if (exist){
+      setCartItems(
+        cartItems.map((x) => x.id === product.id ? {...exist, qty: exist.qty + 1} : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, {...product, qty: 1 }]);
+    }
+  };
+
+  //remove items from cart
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id) );
+    } else {
+      setCartItems(cartItems.map((x) => x.id === product.id ? {...exist, qty: exist.qty - 1} : x
+        )
+        );
+    }
+  };
   return (
     <div>
         <Router history={history}>
-        <Header user={user} logOutUser={logOutUser}/>
+        <Header user={user} logOutUser={logOutUser} countCartItems={cartItems.length}/>
         {user &&  getWelcomeMessage() }
           <Switch>
             <Route  exact path="/" component={() => <Home user={userName} />} />
-            <Route  exact path="/Cart" component={Cart}/>
+            <Route  exact path="/Basket" component={Basket}/>
             <Route exact path="/Signup" component={() => <Signup registerUser={registerUser} />} />
             <Route exact  path="/Signin" component={Signin} />
             <Route exact path="/About" component={About} />
@@ -106,12 +138,14 @@ function App(props) {
 
           </Switch>
         </Router>
-      <Footer/>
         <>
-        <CartProvider>
-          <Cart />
-        </CartProvider>
+        <div className="row">
+        <Main onAdd={onAdd} products={products}></Main>
+        <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
+        </div>
         </>
+      <Footer/>
+      
     </div>
   );
 }

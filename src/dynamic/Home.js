@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
+import Product from '../dynamic/Product';
+
 
 class Home extends React.Component {
     constructor(props) {
@@ -15,7 +17,6 @@ class Home extends React.Component {
             this.setState({ users: response.data });
         });
     }
-
     render() {
         const { users } = this.state;
         console.log(users);
@@ -43,7 +44,7 @@ class Home extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                                 </Card.Text>
-                                <Button variant="primary">Add to Cart</Button>
+                                <Button variant="primary" >Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>
