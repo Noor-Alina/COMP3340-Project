@@ -13,19 +13,19 @@ export default class FAQ extends React.Component{
             <div class="row">
                 <div class="column block">
                     <h2>Orders</h2>
-                    <p>Data..</p>
+                    <p>Order placement, Tracking, Cancellation and Payment</p>
                 </div>
                 <div class="column block">
                     <h2>Delivery</h2>
-                    <p>Data..</p>
+                    <p>Charges, Shipping and Delivery dates</p>
                 </div>
                 <div class="column block">
                     <h2>Returns and Refunds</h2>
-                    <p>Data..</p>
+                    <p>Policy, payment etc</p>
                 </div>
                 <div class="column block">
                     <h2>Account</h2>
-                    <p>Data..</p>
+                    <p>Create, Edit account, login, account info</p>
             </div>
 
         </div>
