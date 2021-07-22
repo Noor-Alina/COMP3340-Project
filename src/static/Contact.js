@@ -33,7 +33,7 @@ export default class Contact extends React.Component {
       <div>
         <br />
         <div>
-            Contact
+           <h1>Contact Us</h1>
         </div>
         <section>
           <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
