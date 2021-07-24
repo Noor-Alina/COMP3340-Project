@@ -14,9 +14,20 @@ function Cart() {
            <div className="cartModelWrapper" >
                {
                    items.map((item)=>{
-                       return <CartModel name={item.name} email={item.email} />
+                       return <CartModel name={item.name} email={item.price} />
                    })
                }
+           </div>
+           <div>
+           <>
+            <hr></hr>
+            
+            <div className="checkout">
+              <button onClick={() => alert('Implement Checkout!')}>
+                Checkout
+              </button>
+            </div>
+          </>
            </div>
         </div>
     )

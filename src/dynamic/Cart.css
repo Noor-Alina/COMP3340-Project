@@ -4,3 +4,8 @@
     margin-top: 20px;
     flex-wrap: wrap;
 }
+
+button.checkout {
+    position:relative;
+    width:25%;
+  }
