@@ -1,25 +1,26 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
-import Product from '../dynamic/Product';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { setItemsToCart } from '../actions';
+import { useDispatch } from 'react-redux';
 
+function Home() {
+    
+    const [users, setUsers]= useState([])
+   useEffect(()=>{
+    axios.get("/products").then((response) => {
+        setUsers(response.data)
+    });
+   },[])
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            users: [],
-        }
-    }
+   const dispatch= useDispatch()
 
-    componentDidMount() {
-        axios.get("/products").then((response) => {
-            this.setState({ users: response.data });
-        });
-    }
-    render() {
-        const { users } = this.state;
-        console.log(users);
+   const addItemToCart=(user)=>{
+        dispatch(setItemsToCart(user))
+   }
+   
 
         return (
         <div>
@@ -44,7 +45,8 @@ class Home extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                                 </Card.Text>
-                                <Button variant="primary" >Add to Cart</Button>
+                                
+                                <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>
@@ -53,6 +55,6 @@ class Home extends React.Component {
         </div>
         );
     }
-}
+
 
 export default Home;

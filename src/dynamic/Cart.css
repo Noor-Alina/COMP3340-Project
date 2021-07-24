@@ -1,0 +1,6 @@
+.cartModelWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
