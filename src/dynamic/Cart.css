@@ -3,9 +3,17 @@
     justify-content: space-evenly;
     margin-top: 20px;
     flex-wrap: wrap;
+    width: 70%;
 }
 
 button.checkout {
-    position:relative;
+    position:fixed;
     width:25%;
   }
+
+aside {
+    float: right;
+    margin: 0 1.5%;
+    width: 30%;
+  }
+  
