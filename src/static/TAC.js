@@ -4,9 +4,12 @@ export default class TAC extends React.Component {
 
     render() {
         return (
+            <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
+                Terms and Conditions
+            </div>
+
             <div className="container">
                 <div><br/></div>
-                <h2><strong>Terms and Conditions</strong></h2>
                 <p className="tac-text">Welcome to EcoShopper!!</p>
                 <p className="tac-text">
                     These terms and conditions outline the rules and regulations for the use of EcoShopper Website.

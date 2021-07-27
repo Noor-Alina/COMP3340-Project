@@ -35,9 +35,9 @@ export default class Contact extends React.Component {
       <div>
         <Header />
         <br />
-        <div>
-          <h1 className="contact-h1">Contact-Us Form</h1>
-        </div>
+        <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
+                Contact
+            </div> 
         <section>
           <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
             <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />

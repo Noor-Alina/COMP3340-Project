@@ -7,10 +7,11 @@ export default class About extends React.Component{
       
     render() {
         return (
+
         <div>            
             <div>
-            <div class="about">
-                <h2>About EcoShopper</h2>
+            <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
+            About
             </div>
                 
             <br/>
@@ -39,5 +40,4 @@ export default class About extends React.Component{
         </div>
         </div>
         );
-}
 }

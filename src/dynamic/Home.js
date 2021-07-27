@@ -22,14 +22,14 @@ class Home extends React.Component {
 
         return (
         <div>
-            <div className = "row">
-                    <div className = "col-md-8">
-                        <form className="search-bar">
-                            <input type="text" placeholder="Search..." name="search-button" />
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
+            <div style={{marginTop: 20}} className="r-flex align-items-center justify-content-center margin-top:5">
+                <br/>
+                    <form className="search-bar">
+                        <input type="text" placeholder="Search..." name="search-button" />
+                        <button type="submit">Submit</button>
+                    </form>
+                <br/>
+            </div>
                 <br></br>
             <ul className="flex-container wrap">
                 {users.map(user =>
