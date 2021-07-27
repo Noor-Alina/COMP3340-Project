@@ -1,5 +1,7 @@
-import React from 'react'
-import axios from 'axios'
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import React from 'react';
+import axios from 'axios';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -31,9 +33,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <br />
         <div>
-        <h1 className="contact-h1">Contact Us</h1>
+          <h1 className="contact-h1">Contact-Us Form</h1>
         </div>
         <section>
           <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
