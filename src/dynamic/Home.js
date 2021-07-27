@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { setItemsToCart } from '../actions';
-import { useDispatch } from 'react-redux';
+import { increaseitemQuantity, setItemsToCart } from '../actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Home() {
     
@@ -14,11 +14,24 @@ function Home() {
         setUsers(response.data)
     });
    },[])
+   const items = useSelector((state) => state.items.cart);
 
    const dispatch= useDispatch()
 
    const addItemToCart=(user)=>{
+
+    const index = items.findIndex(
+        (cartItem) => cartItem.id === user.id
+      );
+
+      if (index >= 0) {
+          console.log(user.id)
+           dispatch(increaseitemQuantity(user.id))
+
+      } else {
         dispatch(setItemsToCart(user))
+      }
+       
    }
    
 
