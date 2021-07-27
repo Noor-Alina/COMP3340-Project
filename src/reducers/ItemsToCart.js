@@ -29,7 +29,7 @@ const itemsToCartReducer=(state={cart:[]}, action)=>{
         case "INCREASE_ITEM_QUANTITY":
              
             let newCart1 = state.cart.map((item)=>{
-                if(item.id==action.payload){
+                if(item.id===action.payload){
                     item.quantity= item.quantity+1
                 }
                 return item
@@ -42,7 +42,7 @@ const itemsToCartReducer=(state={cart:[]}, action)=>{
         case "DECREASE_ITEM_QUANTITY":
              
             let newCart2 = state.cart.map((item)=>{
-                if(item.id==action.payload){
+                if(item.id===action.payload){
                     item.quantity= item.quantity-1
                 }
                 return item

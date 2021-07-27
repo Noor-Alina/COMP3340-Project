@@ -1,6 +1,4 @@
-import { Button } from "bootstrap";
 import React from "react";
-import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import CartModel from "../components/CartModel";
 import "./Cart.css";
