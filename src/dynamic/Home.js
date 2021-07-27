@@ -9,11 +9,11 @@ import { useDispatch, useSelector } from 'react-redux';
 function Home() {
     
     const [users, setUsers]= useState([])
-   useEffect(()=>{
-    axios.get("/products").then((response) => {
-        setUsers(response.data)
-    });
-   },[])
+        useEffect(()=>{
+            axios.get("/products").then((response) => {
+                setUsers(response.data)
+            });
+        },[])
    const items = useSelector((state) => state.items.cart);
 
    const dispatch= useDispatch()
@@ -62,7 +62,8 @@ function Home() {
                                     the card's content.
                                 </Card.Text>
                                <div> $ {user.price}</div><br />
-                                <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
+                                <Button onClick={()=>{
+                                    addItemToCart(user)}} variant="primary">Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>
