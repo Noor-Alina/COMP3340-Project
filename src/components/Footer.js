@@ -1,4 +1,5 @@
 import React from 'react'
+import Contact from '../static/Contact'
 
 class Footer extends React.Component {
     render() {

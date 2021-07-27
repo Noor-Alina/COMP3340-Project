@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {FaCartPlus, FaSignOutAlt, FaUser} from 'react-icons/fa'
 
@@ -22,6 +22,8 @@ class Header extends React.Component {
                     <Link className="nav-item nav-link" to = "FAQ"> FAQ </Link>
                     { user && <Link className="nav-item nav-link" to = "Profile"> Profile <FaUser/> </Link> } 
                     { user && <Link className="nav-item nav-link" to="Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
+                    <Link className="nav-item nav-link" to = "Cart"> 🛒︁ </Link>
+                    { user && <Link className="nav-item nav-link" to="/Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
                 </div>
                 </div>
             </nav>

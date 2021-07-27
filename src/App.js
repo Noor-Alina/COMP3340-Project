@@ -18,9 +18,12 @@ import history from './components/history';
 import Profile from './components/Profile';
 import RegistrationsSuccess from './components/RegistrationsSuccess'
 import NotFound from './components/NotFound'
+import Orders from './static/Orders';
+import Delivery from './static/Delivery';
+import ReturnsRefunds from './static/Returns&Refunds';
+import Account from './static/Account';
 
 function App(props) {
-
   const [user, setUser] = useState(null);
   const [displayName, setDisplayName] = useState(null);
   const [userName, setUserName] = useState(null);
@@ -97,6 +100,10 @@ function App(props) {
               <Route exact path="/TAC" component={TAC} /> 
               <Route exact path="/FAQ" component={FAQ} /> 
               <Route component={NotFound} />
+                  <Route exact path="/Orders" component={Orders} /> 
+            <Route exact path="/Delivery" component={Delivery} /> 
+            <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} /> 
+            <Route exact path="/Account" component={Account} /> 
             </Switch>
           </Router>
       <Footer/>
