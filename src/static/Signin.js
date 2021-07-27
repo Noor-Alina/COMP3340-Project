@@ -55,7 +55,7 @@ class Signin extends React.Component{
   render () {
     return (
         <div> 
-            <form className="mt-3" onSubmit={this.handleSubmit}>
+            <form className="mt-3 w-100 h-100" onSubmit={this.handleSubmit}>
                     <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-6">

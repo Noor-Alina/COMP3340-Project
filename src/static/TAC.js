@@ -4,9 +4,8 @@ export default class TAC extends React.Component {
 
     render() {
         return (
-            <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
-                Terms and Conditions
-            </div>
+            // <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
+                <div>Terms and Conditions
 
             <div className="container">
                 <div><br/></div>
@@ -299,6 +298,7 @@ export default class TAC extends React.Component {
                     damage of any nature.
                 </p>
 
+            </div>
             </div>
         );
     }
