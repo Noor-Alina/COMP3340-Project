@@ -4,8 +4,7 @@ export default class TAC extends React.Component {
 
     render() {
         return (
-            // <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
-                <div>
+            <div>
 
             <div className="container">
                 <div><br/></div>
@@ -205,17 +204,17 @@ export default class TAC extends React.Component {
                     No use of EcoShopper's logo or other artwork will be allowed for
                     linking absent a trademark license agreement.
                 </li>
-
+                <br/>
                 <h3><strong>iFrames</strong></h3>
-
+                <ul>
                 <li>
                     Without prior approval and written permission, you may not create frames
                     around our Webpages that alter in any way the visual presentation or
                     appearance of our Website.
                 </li>
-
+                </ul>
                 <h3><strong>Content Liability</strong></h3>
-
+                <ul>
                 <li>
                     We shall not be hold responsible for any content that appears on your
                     Website. You agree to protect and defend us against all claims that is
@@ -224,13 +223,13 @@ export default class TAC extends React.Component {
                     otherwise violates, or advocates the infringement or other violation of,
                     any third party rights.
                 </li>
-
+                </ul>
                 <h3><strong>Your Privacy</strong></h3>
 
                 <p className="tac-text">Please read Privacy Policy</p>
 
                 <h3><strong>Reservation of Rights</strong></h3>
-
+                <ul>
                 <li>
                     We reserve the right to request that you remove all links or any
                     particular link to our Website. You approve to immediately remove all
@@ -239,9 +238,9 @@ export default class TAC extends React.Component {
                     continuously linking to our Website, you agree to be bound to and follow
                     these linking terms and conditions.
                 </li>
-
+                </ul>
                 <h3><strong>Removal of links from our website</strong></h3>
-
+                <ul>
                 <li>
                     If you find any link on our Website that is offensive for any reason,
                     you are free to contact and inform us any moment. We will consider
@@ -255,7 +254,7 @@ export default class TAC extends React.Component {
                     that the website remains available or that the material on the website
                     is kept up to date.
                 </li>
-
+                </ul>
                 <h3><strong>Disclaimer</strong></h3>
 
                 <p className="tac-text">
