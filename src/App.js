@@ -22,6 +22,7 @@ import Orders from './static/Orders';
 import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/Returns&Refunds';
 import Account from './static/Account';
+import GoogleMap from './static/GoogleMap'
 
 function App(props) {
   const [user, setUser] = useState(null);
@@ -103,10 +104,13 @@ function App(props) {
                   <Route exact path="/Orders" component={Orders} /> 
             <Route exact path="/Delivery" component={Delivery} /> 
             <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} /> 
-            <Route exact path="/Account" component={Account} /> 
+            <Route exact path="/Account" component={Account} />
+          </Switch>
+        </Router>
             </Switch>
           </Router>
       <Footer/>
+      
     </div>
   );
 }
