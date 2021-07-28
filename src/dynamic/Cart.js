@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CartModel from "../components/CartModel";
-import "./Cart.css";
 import Subtotal from "./Subtotal";
 
 function Cart() {
