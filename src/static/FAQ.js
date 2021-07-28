@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default class FAQ extends React.Component{
       
@@ -11,24 +12,31 @@ export default class FAQ extends React.Component{
             </div>
 
             <div class="row">
-                <div class="column block">
+                <Link to ="Orders" style = {{textDecoration: 'none'}}>
+                    <div class="column block">
                     <h2>Orders</h2>
-                    <p>Order placement, Tracking, Cancellation and Payment</p>
-                </div>
-                <div class="column block">
+                    <h6>Order placement, Tracking, Cancellation and Payment</h6>
+                    </div>
+                </Link>
+                <Link to ="Delivery" style = {{textDecoration: 'none'}}>
+                    <div className="column block">
                     <h2>Delivery</h2>
-                    <p>Charges, Shipping and Delivery dates</p>
-                </div>
-                <div class="column block">
+                    <h6>Charges, Shipping and Delivery dates               </h6>
+                    </div>
+                </Link>
+                <Link to ="ReturnsRefunds" style = {{textDecoration: 'none'}}>
+                    <div className="column block">
                     <h2>Returns and Refunds</h2>
-                    <p>Policy, payment etc</p>
-                </div>
-                <div class="column block">
+                    <h6>Policy, payment etc</h6>
+                    </div>
+                </Link>
+                <Link to ="Account" style = {{textDecoration: 'none'}}>
+                    <div className="column block">
                     <h2>Account</h2>
-                    <p>Create, Edit account, login, account info</p>
+                    <h6>Create, Edit account, login, account info</h6>
+                    </div>
+                </Link>
             </div>
-
-        </div>
         </div>
         );
     }
