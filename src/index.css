@@ -14,7 +14,9 @@
   bottom:0;
   right:0;
 }
-
+.tac-text{
+  text-align: left;
+}
 .nav-bar {
   border-top: 1px solid blue;
 }
@@ -130,7 +132,15 @@ section {
   border-color: rgb(173, 255, 47);
   background-color: lightgreen;
 }
+.map-main{
+  text-align: center;
+}
 
+.thankyou{
+  text-align: center;
+  color: #2b2b2b;
+  background-color: #59c65b;
+}
 .contact-label{
   font-weight: bold;
   font-size: 20px;

@@ -2,6 +2,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import React from 'react';
 import axios from 'axios';
+import GoogleMap from './GoogleMap';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -33,7 +34,6 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <br />
         <div>
           <h1 className="contact-h1">Contact-Us Form</h1>
@@ -51,6 +51,13 @@ export default class Contact extends React.Component {
             </div>
           </form>
         </section>
+        <div className="map-main">
+            <h1>GoogleMap</h1>
+            <GoogleMap/>
+          </div>
+          <div className="thankyou">
+            <h1><i>Thank you for contacting EcoShopper!!</i></h1>
+          </div>
         <br/>
       </div>
     );

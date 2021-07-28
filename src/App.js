@@ -19,6 +19,7 @@ import Orders from './static/Orders';
 import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/Returns&Refunds';
 import Account from './static/Account';
+import GoogleMap from './static/GoogleMap'
 
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
@@ -99,10 +100,10 @@ function App(props) {
             <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} /> 
             <Route exact path="/Account" component={Account} /> 
 
-
           </Switch>
         </Router>
       <Footer/>
+      
     </div>
   );
 }
