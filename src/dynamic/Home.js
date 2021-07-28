@@ -1,27 +1,30 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { setItemsToCart } from '../actions';
+import { useDispatch } from 'react-redux';
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            users: [],
-        }
-    }
+function Home() {
+    
+    const [users, setUsers]= useState([])
+   useEffect(()=>{
+    axios.get("/products").then((response) => {
+        setUsers(response.data)
+    });
+   },[])
 
-    componentDidMount() {
-        axios.get("/products").then((response) => {
-            this.setState({ users: response.data });
-        });
-    }
+   const dispatch= useDispatch()
 
-    render() {
-        const { users } = this.state;
-        console.log(users);
+   const addItemToCart=(user)=>{
+        dispatch(setItemsToCart(user))
+   }
+   
 
         return (
         <div>
+              
             <div style={{marginTop: 20}} className="r-flex align-items-center justify-content-center margin-top:5">
                 <br/>
                     <form className="search-bar">
@@ -30,7 +33,8 @@ class Home extends React.Component {
                     </form>
                 <br/>
             </div>
-                <br></br>
+                <br /><br />
+
             <ul className="flex-container wrap">
                 {users.map(user =>
                 <ol className="flex-item">
@@ -43,7 +47,8 @@ class Home extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                                 </Card.Text>
-                                <Button variant="primary">Add to Cart</Button>
+                               <div> $ {user.price}</div><br />
+                                <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>
@@ -52,6 +57,6 @@ class Home extends React.Component {
         </div>
         );
     }
-}
+
 
 export default Home;
