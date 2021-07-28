@@ -7,7 +7,6 @@ export default class TAC extends React.Component {
             <div className="container">
                 <div><br/></div>
                 <h2><strong>Terms and Conditions</strong></h2>
-                
                 <p className="tac-text">
                     <h5><i>Welcome to EcoShopper!!</i></h5>
                     <ul>
@@ -16,7 +15,7 @@ export default class TAC extends React.Component {
                     conditions. Do not continue to use EcoShopper.com if you do not agree to
                     take all of the terms and conditions stated on this page. Our Terms and
                     Conditions were created with the help of the
-                    <a href="https://www.termsandconditionsgenerator.com"> Terms And Conditions Generator</a>.</li>
+                    <a href="https://www.termsandconditionsgenerator.com"> Terms and Conditions Generator</a>.</li>
                     <li>
                     The following terminology applies to these Terms and Conditions, Privacy
                     Statement and Disclaimer Notice and all Agreements: "Client", "You" and
@@ -34,11 +33,8 @@ export default class TAC extends React.Component {
                     referring to same.
                 </li>
                     </ul>
-                    
-
                 </p>
                 <h3><strong>Cookies</strong></h3>
-
                 <p className="tac-text">
                     <ul>
                         <li> We employ the use of cookies. By accessing EcoShopper, you agreed to
@@ -54,8 +50,6 @@ export default class TAC extends React.Component {
                     </ul>
                    
                 </p>
-
-
                 <h3><strong>License</strong></h3>
                 <ul>
                 <li>
@@ -114,7 +108,6 @@ export default class TAC extends React.Component {
                         or present commercial activities or unlawful activity.
                     </li>
                 </ul>
-
                 <li>
                     You hereby grant EcoShopper a non-exclusive license to use, reproduce,
                     edit and authorize others to use, reproduce and edit any of your
@@ -127,7 +120,6 @@ export default class TAC extends React.Component {
                     The following organizations may link to our Website without prior
                     written approval:
                 </li>
-
                 <ol>
                     <li>Government agencies;</li>
                     <li>Search engines;</li>
