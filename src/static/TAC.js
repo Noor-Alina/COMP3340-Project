@@ -284,13 +284,11 @@ export default class TAC extends React.Component {
                     including liabilities arising in contract, in tort and for breach of
                     statutory duty.
                 </p>
-
                 <p className="tac-text">
                     As long as the website and the information and services on the website
                     are provided free of charge, we will not be liable for any loss or
                     damage of any nature.
                 </p>
-
             </div>
         );
     }
