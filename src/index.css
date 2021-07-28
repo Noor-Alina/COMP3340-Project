@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@import url("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
 
 .footer {
   color: #ffffff;
@@ -216,6 +217,150 @@ section {
 	border-radius: 5px;
   padding: 8px 12px;
   font-size: 20px;
+}
+
+/* AN */
+.title {
+  padding: 20px;
+  text-align: center;
+  background: #59c65b; 
+  color: #3c403d;
+  font-size: 30px;
+  
+}
+
+h1 {
+  color: #2b2b2b;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+h2 {
+  color: #6d6d6d;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size:large;
+}
+
+h6{
+  text-align: center;
+  color: #6d6d6d;
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: .4px;
+  color: #6d6d6d;
+  
+}
+
+.row{
+  height: 1em;
+  width: 100%;
+  margin:  auto;
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+}
+
+.column {
+  margin: 25px 15px 25px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background: #ffffff;
+  border-radius: 10px;
+  flex-basis: 33%;
+  height: 120px;
+  width: 400px;
+ 
+
+}
+
+.block{
+  padding: 15px 20px;
+  background-color: #f7f7f7;
+  text-decoration: none;
+}
+
+.container{
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+.accordian-item{
+  background-color: #2b2b2b;
+  border-radius: .4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: .5rem 2px .5rem rgba(70, 69, 69, 0.103);
+}
+
+.accordian-link{
+  font-size: 1.6rem;
+  color: #ffffff;
+  /* color: rgba(255,255,255,.8); */
+  text-decoration: none;
+  background-color: #2b2b2b;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+}
+
+.accordian-link i{
+  color: #ffffff;
+  padding: .5rem;
+}
+
+.accordian-link .ion-md-remove{
+  display: none;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #59c65b;
+  transition: max-height 650ms;
+}
+
+.answer::before{
+  content: "";
+  position: absolute;
+  width: .6rem;
+  height: 90%;
+  background-color: #6d6d6d;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p{
+  color: #ffffff;
+ /* color: rgba(255,255,255,.6);*/
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+.accordian-item:target .answer{
+  max-height: 20rem;
+
+}
+
+.accordian-item:target .accordian-link .ion-md-add{
+  display: none;
+}
+
+
+.accordian-item:target .accordian-link .ion-md-remove{
+  display: block;
 }
 
 .flex-container {
