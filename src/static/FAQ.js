@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
 export default class FAQ extends React.Component{
       
     render() {
         return (
-
         <div>
             <div class="title">
                 <h1> Frequently Asked Questions </h1>
@@ -36,7 +36,7 @@ export default class FAQ extends React.Component{
                     <h6>Create, Edit account, login, account info</h6>
                     </div>
                 </Link>
-            </div>
+            </div>       
         </div>
         );
     }
