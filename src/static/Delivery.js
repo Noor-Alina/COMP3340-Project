@@ -7,11 +7,13 @@ export default class Delivery extends React.Component{
     render() {
         return (
         <div>
-            <Header/>
             <div class="title">
             <h1> FAQs - Delivery </h1>
         </div>
-        <section>
+
+            <br/>
+            <br/>
+
             <div class="container">
                 <div class="accordian">
                     <div class="accordian-item" id="question1">
@@ -69,8 +71,6 @@ export default class Delivery extends React.Component{
                 </div>
             </div>
 
-        </section>
-            <Footer/>
         </div>
         );
     }
