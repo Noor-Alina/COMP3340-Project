@@ -11,7 +11,7 @@ class Footer extends React.Component {
                         <div class="col-sm-6 col-md-3 item">
                             <h3>Get to Know Us</h3>
                             <ul>
-                                <li><a href="#">About Us</a></li>
+                                <li><a href="./About">About Us</a></li>
                                 <li><a href="#">Contact Us</a></li>
                                 <li><a href="#">FAQ</a></li>
                             </ul>
