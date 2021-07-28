@@ -124,9 +124,52 @@ img{
   color: black;
   font-weight: bold;
 }
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  
+} 
+.contact-in p {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+.contact-in ul {
+	padding: 0;
+	margin: 0;
+}
+
+.contact-in ul li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.contact-in ul li a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background: #fff;
+	border-radius: 50px;
+}
+
+.contact-in ul li a i {
+	font-size: 14px;
+	line-height: 30px;
+	color: #000;
+}
 
 section {
-  margin: 0% 20%;
+  margin: 0% ;
   height: 100%;
   font-family: 'Times New Roman', Times, serif;
   border-color: rgb(173, 255, 47);
@@ -159,6 +202,8 @@ section {
 }
 .map-main{
   text-align: center;
+  width: 100%;
+   height:auto;
 }
 
 .thankyou{

@@ -34,31 +34,52 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <br />
-        <div>
-          <h1 className="contact-h1">Contact-Us Form</h1>
+        <div className="float-container">
+        <div className="float-child contact-in">
+          <h1>Contact-Info</h1>
+          <h2><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
+          <p>123-456-789</p>
+          <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+          <p>info@democompany.com</p>
+          <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+          <p>Windsor, ON</p>
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
         </div>
-        <section>
-          <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-            <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />
-            <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required /> </label><br />
-            <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required /></label><br />
-            <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="80" placeholder="Your Message" required></textarea> </label><br />
-            <button className="contact-button" type="submit">Submit</button>
-            <button className="contact-button" type="reset">Reset</button>
-            <div>
-              <br />
-            </div>
-          </form>
-        </section>
-        <div className="map-main">
-            <h1>GoogleMap</h1>
-            <GoogleMap/>
+        <div className="float-child">
+          <div>
+            <h1 className="contact-h1">Contact-Us Form</h1>
           </div>
-          <div className="thankyou">
-            <h1><i>Thank you for contacting EcoShopper!!</i></h1>
-          </div>
-        <br/>
+          <section>
+            <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+              <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />
+              <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required /> </label><br />
+              <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required /></label><br />
+              <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="80" placeholder="Your Message" required></textarea> </label><br />
+              <button className="contact-button" type="submit">Submit</button>
+              <button className="contact-button" type="reset">Reset</button>
+              <div>
+                <br />
+              </div>
+            </form>
+          </section>
+        </div>
+        </div>
+        <br />
+        
+        <br />
+        <div className="map-main" >
+          <h1>Contact-Us Using Map</h1>
+          <GoogleMap />
+        </div>
+        <div className="thankyou">
+          <h1><i>Thank you for contacting EcoShopper!!</i></h1>
+        </div>
+        <br />
       </div>
     );
   }
