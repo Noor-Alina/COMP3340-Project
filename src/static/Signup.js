@@ -90,7 +90,7 @@ function Signup(props) {
                       <div className="form-row">
                       { errorMessage !== null && getFormErrorMessage() }
                       { requestSucessMessage !== null && getFormSuccessMessage() }
-                        <section className="col-sm-12 form-group">
+                        <section className="col-sm-6 form-group">
                           <label
                             className="form-control-label sr-only"
                             htmlFor="displayName"
@@ -109,7 +109,7 @@ function Signup(props) {
                           />
                         </section>
                       </div>
-                      <section className="form-group">
+                      <section className="col-sm-6 form-group">
                         <label
                           className="form-control-label sr-only"
                           htmlFor="email"
@@ -150,7 +150,7 @@ function Signup(props) {
                           />
                         </section>
                       </div>
-                      <section className="form-group">
+                      <section className="col-sm-6 form-group">
                         <label
                           className="form-control-label sr-only"
                           htmlFor="phoneNumber"
@@ -168,8 +168,9 @@ function Signup(props) {
                           onChange={e => setPhoneNumber(e.target.value)}
                         />
                       </section>
-                      <div className="form-group text-right mb-0">
-                        <button className="btn btn-success" type="submit">
+                      <br />
+                      <div className="text-center mb-6">
+                        <button className="btn btn-success" type="submit" style={{textAlign: 'center'}}>
                           Register
                         </button>
                       </div>
