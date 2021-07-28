@@ -4,9 +4,15 @@ export default class TAC extends React.Component {
 
     render() {
         return (
+            // <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
+                <div>Terms and Conditions
+
             <div className="container">
                 <div><br/></div>
+
                 <h2><strong>Terms and Conditions</strong></h2>
+                <p className="tac-text">Welcome to EcoShopper!!</p>
+
                 <p className="tac-text">
                     <h5><i>Welcome to EcoShopper!!</i></h5>
                     <ul>
@@ -289,6 +295,7 @@ export default class TAC extends React.Component {
                     are provided free of charge, we will not be liable for any loss or
                     damage of any nature.
                 </p>
+            </div>
             </div>
         );
     }

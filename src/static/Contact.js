@@ -34,6 +34,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
+
         <div className="float-container">
         <div className="float-child contact-in">
         <h2 className="contact-h1">Contact-Info</h2>
@@ -77,6 +78,26 @@ export default class Contact extends React.Component {
           <h1><i>Thank you for contacting EcoShopper!!</i></h1>
         </div>
         <br />
+
+        <br />
+        <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
+                Contact
+            </div> 
+        <section>
+          <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+            <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />
+            <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required /> </label><br />
+            <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required /></label><br />
+            <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="80" placeholder="Your Message" required></textarea> </label><br />
+            <button className="contact-button" type="submit">Submit</button>
+            <button className="contact-button" type="reset">Reset</button>
+            <div>
+              <br />
+            </div>
+          </form>
+        </section>
+        <br/>
+
       </div>
     );
   }
