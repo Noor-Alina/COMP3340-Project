@@ -36,30 +36,26 @@ export default class Contact extends React.Component {
       <div>
         <div className="float-container">
         <div className="float-child contact-in">
-          <h1>Contact-Info</h1>
-          <h2><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
-          <p>123-456-789</p>
-          <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
-          <p>info@democompany.com</p>
-          <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
-          <p>Windsor, ON</p>
-          <ul>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          </ul>
+        <h2 className="contact-h1">Contact-Info</h2>
+          <div className="contact-form">
+          <h4 className="cinfo"><strong><i className="heading">Phone :</i>+1 226-987-4532</strong></h4>
+          <h4 className="cinfo"><strong><i className="heading">Email : </i>ecoShopper@gmail.com</strong></h4>
+          <h4 className="cinfo"><strong><i className="heading">Location :   </i>Windsor, ON</strong></h4>
+          <div>
+          <img src="/images/efp.jpg " alt="Eco friendly" height="445px"/>
+          </div>
+          </div>
         </div>
         <div className="float-child">
           <div>
-            <h1 className="contact-h1">Contact-Us Form</h1>
+            <h2 className="contact-h1">Contact-Us Form</h2>
           </div>
           <section>
             <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
               <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />
               <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required /> </label><br />
               <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required /></label><br />
-              <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="80" placeholder="Your Message" required></textarea> </label><br />
+              <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="60" placeholder="Your Message" required></textarea> </label><br />
               <button className="contact-button" type="submit">Submit</button>
               <button className="contact-button" type="reset">Reset</button>
               <div>
@@ -69,11 +65,12 @@ export default class Contact extends React.Component {
           </section>
         </div>
         </div>
+        
         <br />
         
         <br />
+        <h2>Google-Map</h2>
         <div className="map-main" >
-          <h1>Contact-Us Using Map</h1>
           <GoogleMap />
         </div>
         <div className="thankyou">
