@@ -7,11 +7,13 @@ export default class ReturnsRefunds extends React.Component{
     render() {
         return (
         <div>
-            <Header/>
             <div class="title">
             <h1> FAQs - Returns and Refunds </h1>
         </div>
-        <section>
+
+            <br/>
+            <br/>
+
             <div class="container">
                 <div class="accordian">
                     <div class="accordian-item" id="question1">
@@ -56,21 +58,18 @@ export default class ReturnsRefunds extends React.Component{
 
                     <div class="accordian-item" id="question4">
                         <a class="accordian-link" href="#question4">
-                            My order has not arrived. What should I do?
+                            I received the wrong items,how do I proceed?
                             <i class="icon ion-md-add"></i>
                             <i class="icon ion-md-remove"></i>
                         </a>
                         <div class="answer">
                             <p>
-                                Please contact us at ecoshopper@gmail.com soon as possible and we will find out where your order is.
+                                Please contact us at ecoshopper@gmail.com soon as possible and we will help you through the process.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </section>
-            <Footer/>
         </div>
         );
     }
