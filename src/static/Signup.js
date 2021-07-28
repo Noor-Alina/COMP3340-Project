@@ -1,26 +1,16 @@
 import React, { useState } from 'react';
 import {withRouter} from 'react-router';
 
-import firebase from '../components/Firebase';
 import 'bootstrap/dist/css/bootstrap.css';
-import RegistrationsModal from '../components/RegistrationsModal'
+import firebase from '../components/Firebase';
     
 function Signup(props) {
-      const [name, setName] = useState('');
       const [displayName, setDisplayName] = useState('');
       const [email, setEmail] = useState('');
       const [passOne, setPassOne] = useState('');
       const [passTwo, setPassTwo] = useState('');
       const [phoneNumber, setPhoneNumber] = useState('');
-      const [errorMessage, setErrorMessage] = useState(null);
-      const [requestSucessMessage, setRequestSucessMessage] = useState(null);
-      const [show, setShow] = useState(false);
-      const handleClose = () => {
-        this.props.history.push("/");
-        setShow(false);
-      }
-      const handleShow = () => setShow(true);
-    
+      const [errorMessage, setErrorMessage] = useState(null);    
       React.useEffect(() => {
         if (passOne !== passTwo){
           passTwo ? setErrorMessage("Password do not match") : setErrorMessage(null)
@@ -42,39 +32,28 @@ function Signup(props) {
           registrationInfo.email,
           passTwo
           ).then( () => {
-            props.registerUser(userName);
-            setName(displayName);
-            handleShow();
-            const ref = firebase.database().ref(`userinformation/${userName}`);
-            ref.push(registrationInfo);
-            setRequestSucessMessage("Profile Created Successfully");
-            setDisplayName('');
-            setPhoneNumber('');
-            setEmail('');
-            setErrorMessage(null)
-            setRequestSucessMessage(null)
+            console.log("HEELLEOEOOE")
+            props.registerUser(userName, displayName);
+            props.history.push("/RegistrationsSuccess")
           })
         .catch( error => {
-          if (error.message !== null){
+          if (error.message !== null) {
             setErrorMessage(error.message)
           } else {
             setErrorMessage(null)
           }
         });
+        const ref = firebase.database().ref(`userinformation/${userName}`);
+        ref.push(registrationInfo);
+        setDisplayName('');
+        setPhoneNumber('');
+        setEmail('');
       }
 
       const getFormErrorMessage = () => {
         return (
             <div className="col-12 alert alert-danger px-3 ">
                 {errorMessage}
-            </div>
-        )
-      }
-
-      const getFormSuccessMessage = () => {
-        return (
-            <div className="col-12 alert alert-primary px-3 ">
-                {requestSucessMessage}
             </div>
         )
       }
@@ -176,13 +155,6 @@ function Signup(props) {
                       </div>
                     </div>
                   </div>
-                  
-                  {show  && (
-                      <RegistrationsModal
-                        show={show}
-                        handleClose={handleClose}
-                        displayName={name}/>
-                      )}
                 </div>
               </div>
             </div>
