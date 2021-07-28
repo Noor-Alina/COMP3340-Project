@@ -1,5 +1,4 @@
 import React from "react";
-import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useHistory } from "react-router-dom";
 import { getCartTotal } from "../reducers/ItemsToCart";

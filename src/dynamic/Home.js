@@ -20,7 +20,7 @@ function Home() {
 
    const addItemToCart=(user)=>{
 
-    const index = items.findIndex(
+   const index = items.findIndex(
         (cartItem) => cartItem.id === user.id
       );
 
@@ -32,8 +32,10 @@ function Home() {
         dispatch(setItemsToCart(user))
       }
        
-   }
+    }
    
+
+
 
         return (
         <div>
