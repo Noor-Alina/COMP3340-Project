@@ -61,13 +61,13 @@ export default class Account extends React.Component{
 
                     <div class="accordian-item" id="question4">
                         <a class="accordian-link" href="#question4">
-                            My order has not arrived. What should I do?
+                            Can I add a second shipping address to my account?
                             <i class="icon ion-md-add"></i>
                             <i class="icon ion-md-remove"></i>
                         </a>
                         <div class="answer">
                             <p>
-                                Please contact us at ecoshopper@gmail.com soon as possible and we will find out where your order is.
+                                Yes, a second shipping address may be added by going into your account information and simply pressing the add address button.
                             </p>
                         </div>
                     </div>
