@@ -65,11 +65,10 @@ function Signup(props) {
                 <div className="col-lg-8">
                   <div className="card bg-light">
                     <div className="card-body">
-                      <h3 className="text-center font-weight-light mb-3">Register</h3>
+                      <h3 className="font-weight-light mb-3">Register</h3>
                       <div className="form-row">
                       { errorMessage !== null && getFormErrorMessage() }
-                      { requestSucessMessage !== null && getFormSuccessMessage() }
-                        <section className="form-group">
+                        <section className="col-sm-12 form-group">
                           <label
                             className="form-control-label sr-only"
                             htmlFor="displayName"
@@ -107,7 +106,7 @@ function Signup(props) {
                         />
                       </section>
                       <div className="form-row">
-                        <section className="form-group">
+                        <section className="col-sm-6 form-group">
                           <input
                             className="form-control"
                             type="password"
@@ -117,7 +116,7 @@ function Signup(props) {
                             onChange={e => setPassOne(e.target.value)}
                           />
                         </section>
-                        <section className="form-group">
+                        <section className="col-sm-6 form-group">
                           <input
                             className="form-control"
                             type="password"
@@ -147,9 +146,8 @@ function Signup(props) {
                           onChange={e => setPhoneNumber(e.target.value)}
                         />
                       </section>
-                      <br />
-                      <div className="text-center mb-6">
-                        <button className="btn btn-success" type="submit" style={{textAlign: 'center'}}>
+                      <div className="form-group text-right mb-0">
+                        <button className="btn btn-success" type="submit">
                           Register
                         </button>
                       </div>
