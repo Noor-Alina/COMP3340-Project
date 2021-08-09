@@ -11,7 +11,6 @@ class Header extends React.Component {
         return (
             <nav className="site-nav family-sans navbar navbar-expand bg-success navbar-dark higher">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper</Link>
                      
                 <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper </Link>
                 <div className="navbar-nav ml-auto">
