@@ -43,7 +43,6 @@ class Header extends React.Component {
                             <NavDropdown.Item href="country/Quatar">Quatar</NavDropdown.Item>
                             <NavDropdown.Item href="country/Turkey">Turkey</NavDropdown.Item>
                             <NavDropdown.Item href="country/UK">UK</NavDropdown.Item>
-                    
                         </NavDropdown> 
                     </Nav>
                     { !user && <Link className="nav-item nav-link" to = "Signin"> Log in </Link>}
