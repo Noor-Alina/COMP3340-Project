@@ -16,6 +16,21 @@ class Header extends React.Component {
                      
                 <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper </Link>
                 <div className="navbar-nav ml-auto">
+                <Nav>
+                        <NavDropdown title="Country">
+                            <NavDropdown.Item href="country/Canada">Canada</NavDropdown.Item>
+                            <NavDropdown.Item href="country/India">India</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Germany">Germany</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Autralia">Australia</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Pakistan">Pakistan</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Iran">Iran</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Syria">Syria</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Iraq">Iraq</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Japan">Japan</NavDropdown.Item>
+
+                        </NavDropdown>
+                    
+                    </Nav>
                     { !user && <Link className="nav-item nav-link" to = "Signin"> Log in </Link>}
                     { !user && <Link className="nav-item nav-link" to = "Signup"> Sign up </Link> }
                     { user && <Link className="nav-item nav-link" to = "Cart"> Cart </Link> }
@@ -27,13 +42,7 @@ class Header extends React.Component {
                     { user && <Link className="nav-item nav-link" to="Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
                     <Link className="nav-item nav-link" to = "Cart"> 🛒︁ </Link>
                     { user && <Link className="nav-item nav-link" to="/Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
-                    <Nav>
-                        <NavDropdown title="Country">
-                            <NavDropdown.Item href="country/Canada">Canada</NavDropdown.Item>
-                        </NavDropdown>
                     
-                    </Nav>
-          
                 </div>
                 </div>
             </nav>

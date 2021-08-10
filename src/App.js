@@ -106,11 +106,6 @@ function App(props) {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} />
           <Route exact path="/Account" component={Account} />
-          <Nav>
-            <Nav.Link href="products">Products</Nav.Link>
-          </Nav>
-          
-          
         </Switch>
       </Router>
     <Footer /> 
