@@ -21,7 +21,7 @@ import RegistrationsSuccess from './components/RegistrationsSuccess'
 import NotFound from './components/NotFound'
 import Orders from './static/Orders';
 import Delivery from './static/Delivery';
-import ReturnsRefunds from './static/Returns&Refunds';
+import ReturnsRefunds from './static/ReturnsRefunds';
 import Account from './static/Account';
 import GoogleMap from './static/GoogleMap';
 
