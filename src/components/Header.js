@@ -21,7 +21,7 @@ class Header extends React.Component {
                             <NavDropdown.Item href="country/Canada">Canada</NavDropdown.Item>
                             <NavDropdown.Item href="country/America">America</NavDropdown.Item>
                             <NavDropdown.Item href="country/Africa">Africa</NavDropdown.Item>
-                            <NavDropdown.Item href="country/Autralia">Australia</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Australia">Australia</NavDropdown.Item>
                             <NavDropdown.Item href="country/Brazil">Brazil</NavDropdown.Item>
                             <NavDropdown.Item href="country/Carribean">Carribean</NavDropdown.Item>
                             <NavDropdown.Item href="country/China">China</NavDropdown.Item>
