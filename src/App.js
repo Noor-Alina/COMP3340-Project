@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Navbar,Nav } from 'react-bootstrap';
 
 import Home from './dynamic/Home';
 import Cart from './dynamic/Cart';
@@ -22,7 +23,7 @@ import Orders from './static/Orders';
 import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/Returns&Refunds';
 import Account from './static/Account';
-import GoogleMap from './static/GoogleMap'
+import GoogleMap from './static/GoogleMap';
 
 function App(props) {
   const [user, setUser] = useState(null);
@@ -105,9 +106,14 @@ function App(props) {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} />
           <Route exact path="/Account" component={Account} />
+          <Nav>
+            <Nav.Link href="products">Products</Nav.Link>
+          </Nav>
+          
+          
         </Switch>
       </Router>
-    <Footer />
+    <Footer /> 
       
     </div >
   );

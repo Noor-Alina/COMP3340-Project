@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {FaCartPlus, FaSignOutAlt, FaUser} from 'react-icons/fa'
 
 import 'bootstrap/dist/css/bootstrap.css';
+import { Navbar,Nav, NavDropdown } from 'react-bootstrap';
 
 class Header extends React.Component {
 
@@ -26,6 +27,13 @@ class Header extends React.Component {
                     { user && <Link className="nav-item nav-link" to="Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
                     <Link className="nav-item nav-link" to = "Cart"> 🛒︁ </Link>
                     { user && <Link className="nav-item nav-link" to="/Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
+                    <Nav>
+                        <NavDropdown title="Country">
+                            <NavDropdown.Item href="country/Canada">Canada</NavDropdown.Item>
+                        </NavDropdown>
+                    
+                    </Nav>
+          
                 </div>
                 </div>
             </nav>
