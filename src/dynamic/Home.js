@@ -28,8 +28,8 @@ function Home() {
             <div style={{marginTop: 20}} className="r-flex align-items-center justify-content-center margin-top:5">
                 <br/>
                     <form className="search-bar">
-                        <input type="text" placeholder="Search..." name="search-button" />
-                        <button type="submit">Submit</button>
+                        <input type="text" placeholder="search..." name="search-button" />
+                        <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 <br/>
             </div>
@@ -39,7 +39,7 @@ function Home() {
                 {users.map(user =>
                 <ol className="flex-item">
                     <Card style={{ width: '18rem', marginBottom: '2rem'}}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card.Img variant="top" />
                             <Card.Body>
                                 <Card.Title>{user.name}</Card.Title>
                                 <Card.Text>

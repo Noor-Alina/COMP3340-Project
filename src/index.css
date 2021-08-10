@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 @import url("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .footer {
   color: #ffffff;
@@ -61,8 +62,8 @@
 .search-bar {
   position: relative;
   width: 50%;
-  left: 60%;
-  margin-top: 50px;
+  left: 40%;
+  margin-top: 10px;
 } 
 
 p {
