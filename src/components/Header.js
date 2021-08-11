@@ -1,6 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {FaCartPlus, FaSignOutAlt, FaShoppingCart} from 'react-icons/fa'
+import {FaCartPlus, FaShoppingCart, FaSignOutAlt, FaUser} from 'react-icons/fa'
+
+import 'bootstrap/dist/css/bootstrap.css';
+import { Navbar,Nav, NavDropdown } from 'react-bootstrap';
 
 class Header extends React.Component {
 
@@ -12,6 +15,35 @@ class Header extends React.Component {
                      
                 <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper </Link>
                 <div className="navbar-nav ml-auto">
+                <Nav>
+                        <NavDropdown title="Country">
+                            <NavDropdown.Item href="country/Canada">Canada</NavDropdown.Item>
+                            <NavDropdown.Item href="country/America">America</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Africa">Africa</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Australia">Australia</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Brazil">Brazil</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Carribean">Carribean</NavDropdown.Item>
+                            <NavDropdown.Item href="country/China">China</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Europe">Europe</NavDropdown.Item>
+                            <NavDropdown.Item href="country/France">France</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Germany">Germany</NavDropdown.Item>
+                            <NavDropdown.Item href="country/HongKong">HongKong</NavDropdown.Item>
+                            <NavDropdown.Item href="country/India">India</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Italy">Italy</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Iran">Iran</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Iraq">Iraq</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Japan">Japan</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Luxembourg">Luxembourg</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Malaysia">Malaysia</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Mexico">Mexico</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Norway">Norway</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Pakistan">Pakistan</NavDropdown.Item>   
+                            <NavDropdown.Item href="country/Syria">Syria</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Quatar">Quatar</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Turkey">Turkey</NavDropdown.Item>
+                            <NavDropdown.Item href="country/UK">UK</NavDropdown.Item>
+                        </NavDropdown> 
+                    </Nav>
                     { !user && <Link className="nav-item nav-link" to = "Signin"> Log in </Link>}
                     { !user && <Link className="nav-item nav-link" to = "Signup"> Sign up </Link> }
                     { user && <Link className="nav-item nav-link" to = "Cart"> Cart </Link> }
