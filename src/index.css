@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 @import url("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
 
+
 .footer {
   color: #ffffff;
   background-color: #2b2b2b;
@@ -15,6 +16,7 @@
   bottom:0;
   right:0;
 }
+
 .tac-text{
   text-align: left;
 }
@@ -137,8 +139,8 @@ img{
   
 } 
 section {
-  margin: 0% ;
-  height: 615px;
+  margin: 0% 20%;
+  height: 100%;
   font-family: 'Times New Roman', Times, serif;
   border-color: rgb(173, 255, 47);
   background-color: lightgreen;
@@ -158,7 +160,7 @@ section {
 }
 
 .contact-text{
-  width: 100%;
+  width: 30%;
   height: 100%;
 }
 
@@ -220,6 +222,7 @@ section {
 }
 
 /* AN */
+
 .title {
   padding: 20px;
   text-align: center;
@@ -256,7 +259,7 @@ p {
   color: #6d6d6d;
   
 }
-
+/*
 .row{
   height: 1em;
   width: 100%;
@@ -265,7 +268,7 @@ p {
   padding-top: 100px;
   justify-content: center;
 }
-
+*/
 .column {
   margin: 25px 15px 25px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -303,7 +306,7 @@ p {
 .accordian-link{
   font-size: 1.6rem;
   color: #ffffff;
-  /* color: rgba(255,255,255,.8); */
+  
   text-decoration: none;
   background-color: #2b2b2b;
   width: 100%;
@@ -344,7 +347,7 @@ p {
 
 .answer p{
   color: #ffffff;
- /* color: rgba(255,255,255,.6);*/
+ 
   font-size: 1.6rem;
   padding: 2rem;
 }
@@ -474,3 +477,42 @@ p {
 
 /*Cart*/
 
+.cartModelWrapper{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+button.checkout {
+  position:fixed;
+  width:25%;
+}
+
+.checkout-right{
+width:100%;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.subtotal > button {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}

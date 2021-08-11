@@ -61,7 +61,7 @@ class Signin extends React.Component{
                         <div className="col-lg-6">
                         <div className="card bg-light">
                             <div className="card-body">
-                            <h3 className="font-weight-light mb-3">Log in</h3>
+                            <h3 className="text-center font-weight-light mb-3">Log in</h3>
                             <section className="form-group">
                             { this.state.errorMessage && this.renderError() }
                                 <label
@@ -91,8 +91,9 @@ class Signin extends React.Component{
                                 onChange={this.handleChange}
                                 />
                             </section>
-                            <div className="form-group text-right mb-0">
-                                <button className="btn btn-success" type="submit">
+                            <br />
+                            <div className="text-center mb-6">  
+                                <button className="btn btn-success" type="submit"  style={{textAlign: 'center'}}>
                                 Log in
                                 </button>
                             </div>

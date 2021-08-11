@@ -3,24 +3,39 @@ import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { setItemsToCart } from '../actions';
-import { useDispatch } from 'react-redux';
+import { increaseitemQuantity, setItemsToCart } from '../actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Home() {
     
     const [users, setUsers]= useState([])
-   useEffect(()=>{
-    axios.get("/products").then((response) => {
-        setUsers(response.data)
-    });
-   },[])
+        useEffect(()=>{
+            axios.get("/products").then((response) => {
+                setUsers(response.data)
+            });
+        },[])
+   const items = useSelector((state) => state.items.cart);
 
    const dispatch= useDispatch()
 
    const addItemToCart=(user)=>{
+
+   const index = items.findIndex(
+        (cartItem) => cartItem.id === user.id
+      );
+
+      if (index >= 0) {
+          console.log(user.id)
+           dispatch(increaseitemQuantity(user.id))
+
+      } else {
         dispatch(setItemsToCart(user))
-   }
+      }
+       
+    }
    
+
+
 
         return (
         <div>
@@ -48,7 +63,8 @@ function Home() {
                                     the card's content.
                                 </Card.Text>
                                <div> $ {user.price}</div><br />
-                                <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
+                                <Button onClick={()=>{
+                                    addItemToCart(user)}} variant="primary">Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {FaCartPlus, FaSignOutAlt, FaUser} from 'react-icons/fa'
+import {FaCartPlus, FaShoppingCart, FaSignOutAlt, FaUser} from 'react-icons/fa'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar,Nav, NavDropdown } from 'react-bootstrap';
@@ -12,7 +12,6 @@ class Header extends React.Component {
         return (
             <nav className="site-nav family-sans navbar navbar-expand bg-success navbar-dark higher">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper</Link>
                      
                 <Link className="navbar-brand" to = "/"> <FaCartPlus className="mr-1" /> EcoShopper </Link>
                 <div className="navbar-nav ml-auto">
@@ -50,9 +49,7 @@ class Header extends React.Component {
                     <Link className="nav-item nav-link" to = "About"> About </Link> 
                     <Link className="nav-item nav-link" to = "TAC"> TAC </Link> 
                     <Link className="nav-item nav-link" to = "FAQ"> FAQ </Link>
-                    { user && <Link className="nav-item nav-link" to = "Profile"> Profile <FaUser/> </Link> } 
-                    { user && <Link className="nav-item nav-link" to="Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
-                    <Link className="nav-item nav-link" to = "Cart"> 🛒︁ </Link>
+                    <Link className="nav-item nav-link" to = "Cart"> <FaShoppingCart className="mr-1" />︁︁ </Link>
                     { user && <Link className="nav-item nav-link" to="/Signin" onClick={e => logOutUser(e)}> Log out <FaSignOutAlt />  </Link> }
                 </div>
                 </div>
