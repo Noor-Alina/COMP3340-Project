@@ -18,10 +18,9 @@ class Header extends React.Component {
                 <div className="navbar-nav ml-auto">
                 <Nav>
                         <NavDropdown title="Country">
-                            <NavDropdown.Item href="country/Canada">Canada</NavDropdown.Item>
-                            <NavDropdown.Item href="country/America">America</NavDropdown.Item>
-                            <NavDropdown.Item href="country/Africa">Africa</NavDropdown.Item>
-                            <NavDropdown.Item href="country/Australia">Australia</NavDropdown.Item>
+                            <NavDropdown.Item href="src/country/Canada">Canada</NavDropdown.Item>
+                            <NavDropdown.Item href="country/America.js">America</NavDropdown.Item>
+                            <NavDropdown.Item href="country/Australia.js">Australia</NavDropdown.Item>
                             <NavDropdown.Item href="country/Brazil">Brazil</NavDropdown.Item>
                             <NavDropdown.Item href="country/Carribean">Carribean</NavDropdown.Item>
                             <NavDropdown.Item href="country/China">China</NavDropdown.Item>
@@ -39,7 +38,6 @@ class Header extends React.Component {
                             <NavDropdown.Item href="country/Mexico">Mexico</NavDropdown.Item>
                             <NavDropdown.Item href="country/Norway">Norway</NavDropdown.Item>
                             <NavDropdown.Item href="country/Pakistan">Pakistan</NavDropdown.Item>   
-                            <NavDropdown.Item href="country/Syria">Syria</NavDropdown.Item>
                             <NavDropdown.Item href="country/Quatar">Quatar</NavDropdown.Item>
                             <NavDropdown.Item href="country/Turkey">Turkey</NavDropdown.Item>
                             <NavDropdown.Item href="country/UK">UK</NavDropdown.Item>
