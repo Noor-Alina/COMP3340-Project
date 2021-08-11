@@ -10,8 +10,8 @@ export default class About extends React.Component {
 
             <div>
                 <div>
-                    <div style={{ marginTop: 20 }} className="d-flex align-items-center justify-content-center margin-top:5">
-                        About
+                    <div style={{ marginTop: 5 }} className="about">
+                        <h2>About EcoShopper</h2>
                     </div>
 
                     <br />
@@ -45,7 +45,7 @@ export default class About extends React.Component {
 
                             <div class="float-child">
                                 <div class="columns"></div>
-                                <h5 class="Title-text" style={{ overflow: "hidden" }}></h5>
+                                <h5 class="Title-text" style={{ overflow: "hidden" }}>&nbsp;</h5>
                                 <br></br>
                                 <center><iframe width="600" height="250" src="https://www.youtube.com/embed/mA9XSgV9te0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
                             </div>
