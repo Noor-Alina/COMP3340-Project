@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default class Canada extends React.Component{
-    render(){
+function Canada(){
         return(
             <div>
                 <h1>Welcome to Canada!!</h1>
             </div>
         );
-    }
+    
 }
+export default Canada;

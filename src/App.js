@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Navbar,Nav } from 'react-bootstrap';
+import 'semantic-ui-css/semantic.min.css';
+
 
 import Home from './dynamic/Home';
 import Cart from './dynamic/Cart';
@@ -24,6 +26,9 @@ import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/ReturnsRefunds';
 import Account from './static/Account';
 import GoogleMap from './static/GoogleMap';
+import Canada from './country/Canada';
+import Africa from './country/Africa';
+import America from './country/America';
 
 function App(props) {
   const [user, setUser] = useState(null);
@@ -106,6 +111,11 @@ function App(props) {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} />
           <Route exact path="/Account" component={Account} />
+          <Route exact path="/Canada" component={Canada}/>
+          <Route exact path="/Africa" component={Africa}/>
+          <Route exact path="/America" component={America}/>
+
+
         </Switch>
       </Router>
     <Footer /> 
