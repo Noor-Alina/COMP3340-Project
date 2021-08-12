@@ -34,11 +34,12 @@ class Footer extends React.Component {
                                 <li><a href="#">Account/Profile</a></li>
                             </ul>
                         </div>
+                        <p class="copyright">EcoShopper: Ethically Sroucede Products © 2021</p>
                     </div>
-                    <p><em>EcoShopper: Ethically Sourced Products &copy; 2021</em></p>
-                </div>
+                    </div>
                 </footer>
             </div>
+            
         )
     }
 }

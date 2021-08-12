@@ -24,6 +24,7 @@ import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/ReturnsRefunds';
 import Account from './static/Account';
 import GoogleMap from './static/GoogleMap';
+import Canada from './country/Canada'
 
 function App(props) {
   const [user, setUser] = useState(null);
@@ -106,6 +107,7 @@ function App(props) {
           <Route exact path="/Delivery" component={Delivery} />
           <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} />
           <Route exact path="/Account" component={Account} />
+          <Route exact path="/Canada" component={Canada}/>
         </Switch>
       </Router>
     <Footer /> 
