@@ -24,6 +24,16 @@ import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/ReturnsRefunds';
 import Account from './static/Account';
 import GoogleMap from './static/GoogleMap';
+import styled, { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme, greenTheme, GlobalStyles } from './dynamic/themes';
+import { Button } from 'react-bootstrap';
+
+
+const StyledApp = styled.div`
+
+color: ${props => props.theme.fontColor};
+`;
+
 
 function App(props) {
   const [user, setUser] = useState(null);
@@ -31,6 +41,12 @@ function App(props) {
   const [userName, setUserName] = useState(null);
   const [userID, setUserID] = useState(null);
   const [userDetails, setUserDetails] = useState({});
+
+  const [theme, setTheme] = useState("light");
+
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : theme === 'dark' ? setTheme('green') : setTheme('light');
+  }
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged(FBUser => {
@@ -86,9 +102,12 @@ function App(props) {
   }
 
   return (
-    <div>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : theme === 'dark' ? darkTheme : greenTheme}>
+      <GlobalStyles />
+    <StyledApp>
       <Router history={history}>
         <Header user={user} logOutUser={logOutUser} />
+        <button className="changeTheme bg-success float-left" onClick={() => themeToggler()} >Change Theme</button>
         {user && getWelcomeMessage()}
         <Switch>
           <Route exact path="/" component={() => <Home user={user} />} />
@@ -110,7 +129,9 @@ function App(props) {
       </Router>
     <Footer /> 
       
-    </div >
+    </StyledApp>
+    
+    </ThemeProvider>
   );
 }
 

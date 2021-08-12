@@ -34,7 +34,7 @@ export default class About extends React.Component {
                             <h2>Prices?</h2>
                             <p style={{ textAlign: 'left' }}>We try to get our valued customres the best value for their money.</p>
                         </div>
-                        <div class="float-container">
+                        <div>
 
                             <div class="float-child">
                                 <div class="columns"></div>
