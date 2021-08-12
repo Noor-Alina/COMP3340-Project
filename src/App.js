@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Navbar,Nav } from 'react-bootstrap';
 
 import Home from './dynamic/Home';
 import Cart from './dynamic/Cart';
@@ -15,9 +16,12 @@ import firebase from './components/Firebase';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import history from './components/history';
+import Profile from './components/Profile';
+import RegistrationsSuccess from './components/RegistrationsSuccess'
+import NotFound from './components/NotFound'
 import Orders from './static/Orders';
 import Delivery from './static/Delivery';
-import ReturnsRefunds from './static/Returns&Refunds';
+import ReturnsRefunds from './static/ReturnsRefunds';
 import Account from './static/Account';
 import GoogleMap from './static/GoogleMap';
 import styled, { ThemeProvider } from 'styled-components';
@@ -28,11 +32,11 @@ import Canada from './country/Canada'
 const StyledApp = styled.div`
 color: ${props => props.theme.fontColor};
 `;
-//TAC: Terms and Conditions page
-//FAQ: Frequently Asked Questions page
+
 
 function App(props) {
   const [user, setUser] = useState(null);
+  const [displayName, setDisplayName] = useState(null);
   const [userName, setUserName] = useState(null);
   const [userID, setUserID] = useState(null);
   const [userDetails, setUserDetails] = useState({});
@@ -44,7 +48,7 @@ function App(props) {
   }
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged( FBUser => {
+    firebase.auth().onAuthStateChanged(FBUser => {
       if (FBUser) {
         setUser(FBUser);
         setUserName(FBUser.displayName);
@@ -53,11 +57,10 @@ function App(props) {
         const profileRef = firebase.database().ref('userinformation/' + FBUser.displayName)
         profileRef.on('value', snapshot => {
           const snapshotData = snapshot.val();
-          for (let item in snapshotData){
+          for (let item in snapshotData) {
             setUserDetails(snapshotData[item]);
             break;
           }
-          
         });
       } else {
         setUser(null);
@@ -65,10 +68,11 @@ function App(props) {
     });
   }, [user, userID]);
 
-  const registerUser = userName => {
+  const registerUser = (userName, dname) => {
+    setDisplayName(dname);
     firebase.auth().onAuthStateChanged(FBUser => {
       FBUser.updateProfile({
-        displayName : userName,
+        displayName: userName,
       }).then(() => {
         setUser(FBUser);
         setUserName(FBUser.displayName);
@@ -83,14 +87,16 @@ function App(props) {
     setUserID(null);
     firebase.auth().signOut().then(() => {
       history.push("/Signin");
+      window.location.reload();
     })
+
   }
 
   const getWelcomeMessage = () => {
     return (
-        <div className="text-center mt-4">
-          <h4 className="card-title font-weight-light m-0">  Welcome { userName }! </h4>
-        </div>
+      <div className="text-center mt-4">
+        <h4 className="card-title font-weight-light m-0">  Welcome {userName}! </h4>
+      </div>
     );
   }
 

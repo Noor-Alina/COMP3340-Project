@@ -3,7 +3,7 @@ import {withRouter} from 'react-router';
 
 import firebase from '../components/Firebase';
 import 'bootstrap/dist/css/bootstrap.css';
-import RegistrationsModal from '../components/RegistrationsModal'
+import RegistrationsModal from '../components/RegistrationsSuccess'
     
 function Signup(props) {
       const [name, setName] = useState('');
