@@ -32,11 +32,9 @@ function Home() {
         dispatch(setItemsToCart(user))
    }
 
-//    function getProduct(id) {
-//        console.log(id);
-//    }
-//                          <a style={{ cursor: 'pointer' }} onClick={()=>getProduct(user.id)}> 
-   
+   } 
+
+
         return (
         <div>
               
@@ -50,27 +48,28 @@ function Home() {
             </div>
                 <br /><br />
 
-            <ul className="flex-container wrap">
+                <ul className="flex-container wrap">
                 {users.map(user =>
                 <ol className="flex-item">
-                        <Card style={{ width: '18rem', marginBottom: '2rem'}}>
-                            <Card.Img variant="top" />
-                                <Card.Body>
-                                    <Card.Title>{user.name}</Card.Title>
-                                    <Card.Text>
-                                        {user.email}
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                    </Card.Text>
-                                <div> $ {user.price}</div><br />
-                                    <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
-                                </Card.Body>
-                        </Card>
+                    <Card style={{ width: '18rem', marginBottom: '2rem'}}>
+                        <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Body>
+                                <Card.Title>{user.name}</Card.Title>
+                                <Card.Text>
+                                    {user.email}
+                                    Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.
+                                </Card.Text>
+                               <div> $ {user.price}</div><br />
+                                <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
+                            </Card.Body>
+                    </Card>
                 </ol>
                 )}
             </ul>                
         </div>
         );
-}
-}
+    }
+
+
 export default Home;
