@@ -55,15 +55,15 @@ class Signin extends React.Component{
   render () {
     return (
         <div> 
-            <form className="mt-3" onSubmit={this.handleSubmit}>
+            <form className="mt-3 w-100 h-100" onSubmit={this.handleSubmit}>
                     <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-6">
                         <div className="card bg-light">
                             <div className="card-body">
-                            <h3 className="font-weight-light mb-3">Log in</h3>
+                            <h3 className="text-center font-weight-light mb-3">Log in</h3>
                             <section className="form-group">
-                            { this.state.errorMessage && this.renderError }
+                            { this.state.errorMessage && this.renderError() }
                                 <label
                                 className="form-control-label sr-only"
                                 htmlFor="Email">
@@ -91,8 +91,9 @@ class Signin extends React.Component{
                                 onChange={this.handleChange}
                                 />
                             </section>
-                            <div className="form-group text-right mb-0">
-                                <button className="btn btn-success" type="submit">
+                            <br />
+                            <div className="text-center mb-6">  
+                                <button className="btn btn-success" type="submit"  style={{textAlign: 'center'}}>
                                 Log in
                                 </button>
                             </div>

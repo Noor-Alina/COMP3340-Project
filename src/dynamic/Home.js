@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { increaseitemQuantity, setItemsToCart } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 
-//test test test test test
 function Home() {
     
     const [users, setUsers]= useState([])
@@ -37,7 +36,7 @@ function Home() {
 //        console.log(id);
 //    }
 //                          <a style={{ cursor: 'pointer' }} onClick={()=>getProduct(user.id)}> 
-
+   
         return (
         <div>
               
@@ -74,3 +73,4 @@ function Home() {
         );
 }
 }
+export default Home;
