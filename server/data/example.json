@@ -2,9 +2,8 @@
     {
         "id": 1,
         "name": "product 1",
-        "img": "",
-        "price": "9.99",
-        "quantity": 1
+        "img": "p1.jpg",
+        "price": "9.99"
         
     },
     {
