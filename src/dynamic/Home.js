@@ -20,8 +20,11 @@ function Home() {
    const addItemToCart=(user)=>{
         dispatch(setItemsToCart(user))
    }
-   
 
+   function getProduct(id) {
+       console.log(id);
+   }
+   
         return (
         <div>
               
@@ -38,19 +41,21 @@ function Home() {
             <ul className="flex-container wrap">
                 {users.map(user =>
                 <ol className="flex-item">
-                    <Card style={{ width: '18rem', marginBottom: '2rem'}}>
-                        <Card.Img variant="top" />
-                            <Card.Body>
-                                <Card.Title>{user.name}</Card.Title>
-                                <Card.Text>
-                                    {user.email}
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
-                               <div> $ {user.price}</div><br />
-                                <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
-                            </Card.Body>
-                    </Card>
+                    <a style={{ cursor: 'pointer' }} onClick={()=>getProduct(user.id)}>
+                        <Card style={{ width: '18rem', marginBottom: '2rem'}}>
+                            <Card.Img variant="top" />
+                                <Card.Body>
+                                    <Card.Title>{user.name}</Card.Title>
+                                    <Card.Text>
+                                        {user.email}
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the card's content.
+                                    </Card.Text>
+                                <div> $ {user.price}</div><br />
+                                    <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
+                                </Card.Body>
+                        </Card>
+                    </a>
                 </ol>
                 )}
             </ul>                
