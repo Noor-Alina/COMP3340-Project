@@ -19,7 +19,15 @@ import Orders from './static/Orders';
 import Delivery from './static/Delivery';
 import ReturnsRefunds from './static/Returns&Refunds';
 import Account from './static/Account';
+import GoogleMap from './static/GoogleMap';
+import styled, { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme, greenTheme, GlobalStyles } from './dynamic/themes';
+import { Button } from 'react-bootstrap';
+import Canada from './country/Canada'
 
+const StyledApp = styled.div`
+color: ${props => props.theme.fontColor};
+`;
 //TAC: Terms and Conditions page
 //FAQ: Frequently Asked Questions page
 
@@ -28,6 +36,12 @@ function App(props) {
   const [userName, setUserName] = useState(null);
   const [userID, setUserID] = useState(null);
   const [userDetails, setUserDetails] = useState({});
+
+  const [theme, setTheme] = useState("light");
+
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : theme === 'dark' ? setTheme('green') : setTheme('light');
+  }
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged( FBUser => {
@@ -81,29 +95,37 @@ function App(props) {
   }
 
   return (
-    <div>
-        <Router history={history}>
-        <Header user={user} logOutUser={logOutUser}/>
-        {user &&  getWelcomeMessage() }
-          <Switch>
-            <Route  exact path="/" component={() => <Home user={userName} />} />
-            <Route  exact path="/Cart" component={Cart}/>
-            <Route exact path="/Signup" component={() => <Signup registerUser={registerUser} />} />
-            <Route exact  path="/Signin" component={Signin} />
-            <Route exact path="/About" component={About} />
-            <Route exact path="/Contact" component={Contact} />
-            <Route exact path="/TAC" component={TAC} /> 
-            <Route exact path="/FAQ" component={FAQ} /> 
-            <Route exact path="/Orders" component={Orders} /> 
-            <Route exact path="/Delivery" component={Delivery} /> 
-            <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} /> 
-            <Route exact path="/Account" component={Account} /> 
-
-
-          </Switch>
-        </Router>
-      <Footer/>
-    </div>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : theme === 'dark' ? darkTheme : greenTheme}>
+      <GlobalStyles />
+    <StyledApp>
+      <Router history={history}>
+        <Header user={user} logOutUser={logOutUser} />
+        <button className="changeTheme bg-success float-left" onClick={() => themeToggler()} >Change Theme</button>
+        {user && getWelcomeMessage()}
+        <Switch>
+          <Route exact path="/" component={() => <Home user={user} />} />
+          <Route exact path="/RegistrationsSuccess" component={() => <RegistrationsSuccess name={displayName} />} />
+          <Route exact path="/Cart" component={Cart} />
+          <Route exact path="/Signup" component={() => <Signup registerUser={registerUser} />} />
+          <Route exact path="/Signin" component={() => <Signin />} />
+          <Route exact path="/About" component={About} />
+          <Route exact path="/Profile" component={() => <Profile name={userDetails} />} />
+          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/TAC" component={TAC} />
+          <Route exact path="/FAQ" component={FAQ} />
+          <Route component={NotFound} />
+          <Route exact path="/Orders" component={Orders} />
+          <Route exact path="/Delivery" component={Delivery} />
+          <Route exact path="/ReturnsRefunds" component={ReturnsRefunds} />
+          <Route exact path="/Account" component={Account} />
+          <Route exact path="/Canada" component={Canada}/>
+        </Switch>
+      </Router>
+    <Footer /> 
+      
+    </StyledApp>
+    
+    </ThemeProvider>
   );
 }
 
