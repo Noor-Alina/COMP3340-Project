@@ -1,66 +1,66 @@
 [
     {
         "id": 1,
-        "name": "product 1",
-        "img": "",
-        "price": "9.99",
+        "name": "T-Shirt",
+        "img": "https://assets.vogue.com/photos/5e878d232918c10008aa3044/1:1/w_640,h_640,c_limit/slide_10.jpg",
+        "price": 19.99,
         "quantity": 1
         
     },
     {
         "id": 2,
         "name": "product 2",
-        "img": "Bret",
-        "price": "29.99",
+        "img": "https://cdn.shopify.com/s/files/1/1296/1875/products/little-english-white-cable-knit-sweater_1000x.jpg?v=1567623771",
+        "price": 49.99,
         "quantity": 1
     },
     {
         "id": 3,
-        "name": "product 3",
-        "img": "Bret",
-        "price": "19.99",
+        "name": "Coffee Mug",
+        "img": "https://i5.walmartimages.ca/images/Enlarge/798/654/798654.jpg",
+        "price": 9.99,
         "quantity": 1
     },     
     {
         "id": 4,
-        "name": "product 4",
-        "img": "Bret",
-        "price": "14.99",
+        "name": "Reusable Bamboo Utensil",
+        "img": "https://d2eu6x79z4tb3o.cloudfront.net/products/830/large/to-go-ware-utensils.jpg?1485067866",
+        "price": 14.99,
         "quantity": 1
     },     
     {
         "id": 5,
-        "name": "product 5",
-        "img": "Bret",
-        "price": "11.99",
+        "name": "Eco Safety Razor",
+        "img": "https://theworldpursuit.com/wp-content/uploads/2020/08/eco-friendly-products.jpg",
+        "price": 11.99,
         "quantity": 1
     },     
     {
         "id": 6,
-        "name": "product 6",
-        "img": "Bret",
-        "price": "49.99",
+        "name": "Bamboo Drinking Straw",
+        "img": "https://theworldpursuit.com/wp-content/uploads/2020/07/environmentally-friendly-products.jpg",
+        "price": 4.99,
         "quantity": 1
     },     
     {
         "id": 7,
-        "name": "product 7",
-        "img": "Bret",
-        "price": "54.99",
+        "name": "Reusable Grocery Bag",
+        "img": "https://media.istockphoto.com/photos/blank-white-fabric-canvas-bag-for-shopping-and-save-global-warming-picture-id987655682?k=6&m=987655682&s=612x612&w=0&h=1uLzTHYoRu_FjIadQPsKQawMacQgiF2Tv_AL9fbSC_s=",
+        "price": 54.99,
         "quantity": 1
     },     
     {
         "id": 8,
-        "name": "product 8",
-        "img": "Bret",
-        "price": "1.99",
+        "name": "Bamboo Q-Tips",
+        "img": "https://www.beautetrade.com/uploads/images/products/3/9/eco-friendly-medical-sterile-q-tips-pure-q-tips-qtip-bamboo-wood-wooden-plastic-stick-cotton-swabs-in-buds0-0516170001556714762.jpg",
+        "price": 2.99,
         "quantity": 1
     },     
     {
         "id": 9,
-        "name": "product 9",
-        "img": "Bret",
-        "price": "10.99",
+        "name": "Bamboo Toothbrush",
+        "img": "https://theworldpursuit.com/wp-content/uploads/2020/07/environmentally-friendly-products-3.jpg",
+        "price": 2.99,
         "quantity": 1
     },     
     {

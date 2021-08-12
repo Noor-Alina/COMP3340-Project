@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { increaseitemQuantity, setItemsToCart } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
+import GetList from '../components/GetList';
 
 function Home() {
     
@@ -20,7 +21,7 @@ function Home() {
 
    const addItemToCart=(user)=>{
 
-    const index = items.findIndex(
+   const index = items.findIndex(
         (cartItem) => cartItem.id === user.id
       );
 
@@ -34,6 +35,22 @@ function Home() {
        
    }
    
+   const [productList, setProductList] = useState([]);
+   useEffect(() => {
+       async function fetchProductList(){
+         try{
+             const requestUrl = 'https://610460b13356ea001748f777.mockapi.io/api/product';
+             const response = await fetch(requestUrl);
+             const responseJSON = await response.json();
+             console.log(responseJSON);
+             setProductList(responseJSON);
+         }catch{
+
+         }  
+       }
+       fetchProductList();
+   },[]);
+
 
         return (
         <div>
@@ -48,12 +65,12 @@ function Home() {
                 <br /><br />
 
                 
-
+            
             <ul className="flex-container wrap">
                 {users.map(user =>
                 <ol className="flex-item">
                     <Card style={{ width: '18rem', marginBottom: '2rem'}}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card.Img variant="top" src={user.img} />
                             <Card.Body>
                                 <Card.Title>{user.name}</Card.Title>
                                 <Card.Text>
