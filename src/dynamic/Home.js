@@ -32,9 +32,10 @@ function Home() {
         dispatch(setItemsToCart(user))
    }
 
-   function getProduct(id) {
-       console.log(id);
-   }
+//    function getProduct(id) {
+//        console.log(id);
+//    }
+//                          <a style={{ cursor: 'pointer' }} onClick={()=>getProduct(user.id)}> 
    
         return (
         <div>
@@ -52,7 +53,6 @@ function Home() {
             <ul className="flex-container wrap">
                 {users.map(user =>
                 <ol className="flex-item">
-                    <a style={{ cursor: 'pointer' }} onClick={()=>getProduct(user.id)}>
                         <Card style={{ width: '18rem', marginBottom: '2rem'}}>
                             <Card.Img variant="top" />
                                 <Card.Body>
@@ -66,13 +66,11 @@ function Home() {
                                     <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
                                 </Card.Body>
                         </Card>
-                    </a>
                 </ol>
                 )}
             </ul>                
         </div>
         );
-    }
-
-
+}
+}
 export default Home;
