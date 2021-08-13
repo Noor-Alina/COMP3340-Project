@@ -7,14 +7,21 @@ import { increaseitemQuantity, setItemsToCart } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import GetList from '../components/GetList';
 
+
 function Home() {
     
     const [users, setUsers]= useState([])
+
    useEffect(()=>{
     axios.get("/products").then((response) => {
         setUsers(response.data)
     });
    },[])
+        useEffect(()=>{
+            axios.get("/products").then((response) => {
+                setUsers(response.data)
+            });
+        },[])
    const items = useSelector((state) => state.items.cart);
 
    const dispatch= useDispatch()
@@ -34,7 +41,7 @@ function Home() {
       }
        
    }
-   
+
    const [productList, setProductList] = useState([]);
    useEffect(() => {
        async function fetchProductList(){
@@ -50,6 +57,7 @@ function Home() {
        }
        fetchProductList();
    },[]);
+   } 
 
 
         return (
@@ -58,14 +66,14 @@ function Home() {
             <div style={{marginTop: 20}} className="r-flex align-items-center justify-content-center margin-top:5">
                 <br/>
                     <form className="search-bar">
-                        <input type="text" placeholder="Search..." name="search-button" />
-                        <button type="submit">Submit</button>
+                        <input type="text" placeholder="search..." name="search-button" />
+                        <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 <br/>
             </div>
                 <br /><br />
 
-            <ul className="flex-container wrap">
+                <ul className="flex-container wrap">
                 {users.map(user =>
                 <ol className="flex-item">
                     <Card style={{ width: '18rem', marginBottom: '2rem'}}>

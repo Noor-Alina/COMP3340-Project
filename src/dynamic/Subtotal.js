@@ -16,6 +16,7 @@ function Subtotal() {
         renderText={(value) => (
           <>
             <p style={{textAlign: 'center'}}>
+            <p>
              
               Total ({items.length} items): <strong>{value}</strong>
               <div></div>

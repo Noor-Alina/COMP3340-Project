@@ -56,9 +56,13 @@ export default class Contact extends React.Component {
               <label className="contact-label" for="fname" > First Name: <input className="contact-input" type="text" placeholder="First Name" required /> </label><br />
               <label className="contact-label" for="lname" > Last Name: <input className="contact-input" type="text" placeholder="Last Name" required /> </label><br />
               <label className="contact-label" for="email-id">Email Id: <input className="contact-input" type="email" aria-describedby="emailHelp" placeholder="Email Address" required /></label><br />
+
               <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="32" placeholder="Your Message" required></textarea> </label><br />
               <button className="contact-button" type="submit">Submit</button>
               <button className="contact-button" type="reset">Reset</button>
+              <label className="contact-label" for="message">Message: <br /><textarea className="contact-text" class="c-control" rows="5" cols="45" placeholder="Your Message" required></textarea> </label><br />
+              <button className="btn btn-success" type="submit">Submit</button>&nbsp;
+              <button className="btn btn-success" type="reset">Reset</button>
               <div>
                 <br />
               </div>
