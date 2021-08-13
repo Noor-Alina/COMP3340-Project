@@ -81,9 +81,9 @@ function Home() {
                 </ol>
                 )}
             </ul>
-            <div>
-                <h2>Suggested Websites</h2>
-            <GetList productList={productList} />    
+            <div className=" family-sans bg-success ">
+                <h2 style={{ color: '#000', marginBottom: '2rem'}}>Suggested Websites</h2>
+                <GetList productList={productList} />    
             </div>                
         </div>
         );
