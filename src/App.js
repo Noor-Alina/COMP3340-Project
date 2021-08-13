@@ -34,7 +34,7 @@ const StyledApp = styled.div`
 color: ${props => props.theme.fontColor};
 `;
 
-
+//test
 function App(props) {
   const [user, setUser] = useState(null);
   const [displayName, setDisplayName] = useState(null);
