@@ -2,8 +2,9 @@
     {
         "id": 1,
         "name": "T-Shirt",
-        "img": "https://assets.vogue.com/photos/5e878d232918c10008aa3044/1:1/w_640,h_640,c_limit/slide_10.jpg",
+        "img": "https://shop.tate.org.uk/dw/image/v2/BBPB_PRD/on/demandware.static/-/Sites-TateMasterShop/default/dw41eb4246/tate-art-materials-black-pocket-white-tshirt-g1089-2.jpg?sw=180",
         "price": 19.99,
+        "desc": "",
         "quantity": 1
         
     },
@@ -12,6 +13,7 @@
         "name": "product 2",
         "img": "https://cdn.shopify.com/s/files/1/1296/1875/products/little-english-white-cable-knit-sweater_1000x.jpg?v=1567623771",
         "price": 49.99,
+        "desc": "",
         "quantity": 1
     },
     {
@@ -19,6 +21,7 @@
         "name": "Coffee Mug",
         "img": "https://i5.walmartimages.ca/images/Enlarge/798/654/798654.jpg",
         "price": 9.99,
+        "desc": "",
         "quantity": 1
     },     
     {
@@ -26,6 +29,7 @@
         "name": "Reusable Bamboo Utensil",
         "img": "https://d2eu6x79z4tb3o.cloudfront.net/products/830/large/to-go-ware-utensils.jpg?1485067866",
         "price": 14.99,
+        "desc": "Plastic utensils are not only terrible for the environment, but they are terrible for you too and are not at all earth friendly products.This silverware is heat resistant, small, and lightweight making it the perfect environmentally friendly travel product",
         "quantity": 1
     },     
     {
@@ -33,6 +37,7 @@
         "name": "Eco Safety Razor",
         "img": "https://theworldpursuit.com/wp-content/uploads/2020/08/eco-friendly-products.jpg",
         "price": 11.99,
+        "desc": " This one-time purchase of a beautiful razor should last years. Each razor purchase comes with blades, though you can buy more blades anywhere once those run-out.",
         "quantity": 1
     },     
     {
@@ -40,6 +45,7 @@
         "name": "Bamboo Drinking Straw",
         "img": "https://theworldpursuit.com/wp-content/uploads/2020/07/environmentally-friendly-products.jpg",
         "price": 4.99,
+        "desc": "These bamboo drinking straws can come to the rescue from plastic straws. They are reusable and look cute in any drink – talk about a cool eco friendly product!",
         "quantity": 1
     },     
     {
@@ -47,6 +53,7 @@
         "name": "Reusable Grocery Bag",
         "img": "https://media.istockphoto.com/photos/blank-white-fabric-canvas-bag-for-shopping-and-save-global-warming-picture-id987655682?k=6&m=987655682&s=612x612&w=0&h=1uLzTHYoRu_FjIadQPsKQawMacQgiF2Tv_AL9fbSC_s=",
         "price": 54.99,
+        "desc": "These reusable bags are one of those sustainable home products that really help the environment. If you could help reduce waste on the planet by simply bringing your own bag to the grocery store, would you? Of course! These bags are cute, reusable, and pack up nicely.",
         "quantity": 1
     },     
     {
@@ -54,6 +61,7 @@
         "name": "Bamboo Q-Tips",
         "img": "https://www.beautetrade.com/uploads/images/products/3/9/eco-friendly-medical-sterile-q-tips-pure-q-tips-qtip-bamboo-wood-wooden-plastic-stick-cotton-swabs-in-buds0-0516170001556714762.jpg",
         "price": 2.99,
+        "desc": "A good go green product is the Q tip and they always are at the top of my environmentally friendly products list. Not only are they good for the environment, but they are also sturdier and of better quality than the typical ear swap. These particular cotton swabs are disposable, biodegradable, organic, and all-natural bamboo!",
         "quantity": 1
     },     
     {
@@ -61,6 +69,7 @@
         "name": "Bamboo Toothbrush",
         "img": "https://theworldpursuit.com/wp-content/uploads/2020/07/environmentally-friendly-products-3.jpg",
         "price": 2.99,
+        "desc": "The bamboo toothbrush is one of the best sustainable products out there. These toothbrushes are the best. These bamboo toothbrushes are recyclable along with all their packaging. The bamboo ensures they are just as strong as plastic toothbrushes",
         "quantity": 1
     },     
     {
@@ -68,6 +77,7 @@
         "name": "product 10",
         "img": "Bret",
         "price": "4.99",
+        "desc": "",
         "quantity": 1
     }           
 ]

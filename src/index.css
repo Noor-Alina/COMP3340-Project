@@ -496,6 +496,7 @@ width:100%;
 }
 
 .subtotal {
+  text-align:center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -523,4 +524,11 @@ width:100%;
   position: relative;
   float: right;
   border-radius: 30px;
+}
+.post-list {
+  list-style-type: none;
+}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
 }

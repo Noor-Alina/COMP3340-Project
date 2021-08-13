@@ -15,7 +15,7 @@ function Subtotal() {
       <CurrencyFormat
         renderText={(value) => (
           <>
-            <p>
+            <p style={{textAlign: 'center'}}>
              
               Total ({items.length} items): <strong>{value}</strong>
               <div></div>

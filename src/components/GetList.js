@@ -14,12 +14,29 @@ GetList.defaultProps = {
 function GetList(props) {
     const { productList } = props;
     return (
-        <ul className="post-list"> 
+        <table className="center">
+            <tr>
+                <th style={{textAlign: 'center'}}>Website</th>
+                <th style={{textAlign: 'center'}}>URL</th>
+            </tr>
+            <tr>
+                <td><ul className="post-list" style={{decor: 'center'}}> 
             {productList.map(post => (
-                <li key={post.id}>{post.name}{post.img}</li>
+                <li key={post.id}>{post.website}</li>
                 
             ))}
-        </ul>
+            
+        </ul></td>
+                <td><ul className="post-list">{productList.map(post => (
+                <li key={post.id}>{post.url}</li>
+                
+            ))}</ul></td>
+                
+            </tr>
+            
+        </table>
+        
+        
     );
 }
 

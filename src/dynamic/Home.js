@@ -73,18 +73,18 @@ function Home() {
                         <Card.Img variant="top" src={user.img} />
                             <Card.Body>
                                 <Card.Title>{user.name}</Card.Title>
-                                <Card.Text>
-                                    {user.email}
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
+                                <Card.Text>{user.desc}</Card.Text>
                                <div> $ {user.price}</div><br />
                                 <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>
                 )}
-            </ul>                
+            </ul>
+            <div>
+                <h2>Suggested Websites</h2>
+            <GetList productList={productList} />    
+            </div>                
         </div>
         );
     }
