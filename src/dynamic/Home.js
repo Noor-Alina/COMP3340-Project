@@ -5,9 +5,11 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { setItemsToCart } from '../actions';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Home() {
-    
+    let history = useHistory();
+
     const [users, setUsers]= useState([])
    useEffect(()=>{
     axios.get("/products").then((response) => {
@@ -20,13 +22,18 @@ function Home() {
    const addItemToCart=(user)=>{
         dispatch(setItemsToCart(user))
    }
+
+   const getProduct=(id) => {
+       console.log(id);
+       history.push('/Product', id);
+    }
    
 
         return (
         <div>
               
             <div style={{marginTop: 20}} className="r-flex align-items-center justify-content-center margin-top:5">
-                <br/>
+                <br/>   
                     <form className="search-bar">
                         <input type="text" placeholder="Search..." name="search-button" />
                         <button type="submit">Submit</button>
@@ -34,9 +41,9 @@ function Home() {
                 <br/>
             </div>
                 <br /><br />
-
             <ul className="flex-container wrap">
                 {users.map(user =>
+                  <a style={{ cursor: 'pointer' }} onClick={()=>getProduct(user.id)}> 
                 <ol className="flex-item">
                     <Card style={{ width: '18rem', marginBottom: '2rem'}}>
                         <Card.Img variant="top" src="holder.js/100px180" />
@@ -52,8 +59,9 @@ function Home() {
                             </Card.Body>
                     </Card>
                 </ol>
+                </a> 
                 )}
-            </ul>                
+            </ul>               
         </div>
         );
     }

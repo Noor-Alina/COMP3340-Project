@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 import Home from './dynamic/Home';
+import Product from './dynamic/Product';
 import Cart from './dynamic/Cart';
 import Signup from './static/Signup';
 import Signin from './static/Signin';
@@ -100,6 +101,7 @@ function App(props) {
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/TAC" component={TAC} />
           <Route exact path="/FAQ" component={FAQ} />
+          <Route exact path="/Product" component={() => <Product id={1}/>} />
           <Route component={NotFound} />
           <Route exact path="/Orders" component={Orders} />
           <Route exact path="/Delivery" component={Delivery} />
