@@ -5,10 +5,18 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { increaseitemQuantity, setItemsToCart } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
+import GetList from '../components/GetList';
+
 
 function Home() {
     
     const [users, setUsers]= useState([])
+
+   useEffect(()=>{
+    axios.get("/products").then((response) => {
+        setUsers(response.data)
+    });
+   },[])
         useEffect(()=>{
             axios.get("/products").then((response) => {
                 setUsers(response.data)
@@ -30,8 +38,25 @@ function Home() {
 
       } else {
         dispatch(setItemsToCart(user))
+      }
+       
    }
 
+   const [productList, setProductList] = useState([]);
+   useEffect(() => {
+       async function fetchProductList(){
+         try{
+             const requestUrl = 'https://610460b13356ea001748f777.mockapi.io/api/product';
+             const response = await fetch(requestUrl);
+             const responseJSON = await response.json();
+             console.log(responseJSON);
+             setProductList(responseJSON);
+         }catch{
+
+         }  
+       }
+       fetchProductList();
+   },[]);
    } 
 
 
@@ -52,21 +77,22 @@ function Home() {
                 {users.map(user =>
                 <ol className="flex-item">
                     <Card style={{ width: '18rem', marginBottom: '2rem'}}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card.Img variant="top" src={user.img} />
                             <Card.Body>
                                 <Card.Title>{user.name}</Card.Title>
-                                <Card.Text>
-                                    {user.email}
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
+                                <Card.Text>{user.desc}</Card.Text>
                                <div> $ {user.price}</div><br />
                                 <Button onClick={()=>{addItemToCart(user)}} variant="primary">Add to Cart</Button>
                             </Card.Body>
                     </Card>
                 </ol>
                 )}
-            </ul>                
+            </ul>
+            <div className=" family-sans bg-success ">
+                <h2 style={{ color: '#000'}}>Suggested Websites</h2>
+                <h6 style={{ color: '#000', textAlign: 'center'}}>(Fetched from an api)</h6>
+                <GetList productList={productList} />    
+            </div>                
         </div>
         );
     }

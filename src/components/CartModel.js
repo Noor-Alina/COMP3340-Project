@@ -4,7 +4,10 @@ import { Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { decreaseitemQuantity, increaseitemQuantity, removeFromCart } from '../actions'
 
+
+function CartModel({name, price, id, quantity, desc, img}) {
 function CartModel({name, price, id, quantity}) {
+
     const dispatch= useDispatch()
     const items = useSelector((state) => state.items.cart);
 
@@ -33,9 +36,9 @@ function CartModel({name, price, id, quantity}) {
         <><div>
             
             <Card style={{ width: '18rem', marginBottom: '2rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
+
                     <Card.Text>
 
                         Some quick example text to build on the card title and make up the bulk of

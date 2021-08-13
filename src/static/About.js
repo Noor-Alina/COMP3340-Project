@@ -55,6 +55,27 @@ export default class About extends React.Component {
 
                     <br />
                 </div>
+
+
+                <div class="float-child">
+                                <div class="columns"></div>
+                                <h5 class="Title-text" style={{ overflow: "hidden" }}>Eco-friendly products</h5>
+                                <br></br>
+                                <center><iframe width="600" height="250" src="https://www.youtube.com/embed/x4KNqLQCtPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                            </div>
+
+                            <div class="float-child">
+                                <div class="columns"></div>
+                                <h5 class="Title-text" style={{ overflow: "hidden" }}>&nbsp;</h5>
+                                <br></br>
+                                <center><iframe width="600" height="250" src="https://www.youtube.com/embed/mA9XSgV9te0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                            </div>
+            </div> 
+
+
+            <br/>
+        </div>
+        </div>
             </div>
         );
     }
