@@ -81,7 +81,8 @@ function Home() {
                 )}
             </ul>
             <div className=" family-sans bg-success ">
-                <h2 style={{ color: '#000', marginBottom: '2rem'}}>Suggested Websites</h2>
+                <h2 style={{ color: '#000'}}>Suggested Websites</h2>
+                <h6 style={{ color: '#000', textAlign: 'center'}}>(Fetched from an api)</h6>
                 <GetList productList={productList} />    
             </div>                
         </div>
