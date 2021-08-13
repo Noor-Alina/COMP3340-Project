@@ -77,7 +77,7 @@ export default class userGuide extends React.Component{
             <h2>Dark theme</h2>
             
             </div>
-            <div style={{marginTop: 100}} >
+            <div style={{marginTop: 100, marginBottom: 100}} >
             <img src="/images/8.jpeg" alt="Eco friendly"/>
             
             </div>
