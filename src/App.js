@@ -31,8 +31,6 @@ import Canada from './country/Canada'
 import UserGuide from './static/UserGuide';
 
 const StyledApp = styled.div`
-
-const StyledApp = styled.div`
 color: ${props => props.theme.fontColor};
 `;
 
