@@ -28,6 +28,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, greenTheme, GlobalStyles } from './dynamic/themes';
 import { Button } from 'react-bootstrap';
 import Canada from './country/Canada'
+import UserGuide from './static/UserGuide';
 
 const StyledApp = styled.div`
 color: ${props => props.theme.fontColor};
@@ -119,6 +120,7 @@ function App(props) {
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/TAC" component={TAC} />
           <Route exact path="/FAQ" component={FAQ} />
+          <Route exact path="/UserGuide" component={UserGuide} />
           <Route component={NotFound} />
           <Route exact path="/Orders" component={Orders} />
           <Route exact path="/Delivery" component={Delivery} />
