@@ -59,5 +59,5 @@ function CartModel({name, price, id, quantity}) {
         </>
     )
 }
-
+}
 export default CartModel

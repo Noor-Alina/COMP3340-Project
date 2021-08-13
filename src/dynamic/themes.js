@@ -15,11 +15,7 @@ export const greenTheme = {
     fontColor: "#006400",
     fontColor: "#000",
 };
-export const greenTheme = {
-    body: "#59c65b",
-    fontColor: "#000",
 
-};
 
 export const GlobalStyles = createGlobalStyle`
 
