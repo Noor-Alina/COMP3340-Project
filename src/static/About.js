@@ -11,7 +11,7 @@ export default class About extends React.Component{
         <div>            
             <div>
             <div style={{marginTop: 20}} className="d-flex align-items-center justify-content-center margin-top:5">
-            About
+            <h2 >About EcoShopper</h2>
             </div>
                 
             <br/>
